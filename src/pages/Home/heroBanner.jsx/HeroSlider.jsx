@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import useThemeSwitcher from "../../../hooks/useThemeSwitcher";
 
 const HeroSlider = () => {
-  const [activeTheme] = useThemeSwitcher();
+  const [, setTheme] = useThemeSwitcher(); // Ignore theme here as we fix background
   const [showOptions, setShowOptions] = useState(false);
   const handleShowOptions = () => setShowOptions(true);
 
@@ -28,32 +28,32 @@ const HeroSlider = () => {
   ];
 
   const colors = {
+    background: "#F2EDE6", // Services section background
     primaryText: "#2E2E2E",
     accent: "#8C6239",
-    backgroundLight: "#F9F6F1",
     buttonBase: "#4A342E",
     buttonHover: "#5A4035",
+    subtitle: "#6B6B6B",
   };
 
   return (
     <div
-      className={`mx-auto overflow-hidden py-12 px-5 md:px-12 lg:flex items-center justify-between gap-12 ${
-        activeTheme === "dark"
-          ? "bg-neutral-900 text-white"
-          : "bg-[#F9F6F1] text-[#2E2E2E]"
-      }`}
-      style={{ fontFamily: "'Inter', sans-serif" }}
+      className="mx-auto overflow-hidden py-16 px-5 md:px-12 lg:flex items-center justify-between gap-12"
+      style={{
+        backgroundColor: colors.background,
+        color: colors.primaryText,
+        fontFamily: "'Inter', sans-serif",
+      }}
     >
       {/* Left Content */}
       <div className="flex-1 max-w-xl space-y-6 text-center lg:text-left">
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight" style={{ color: colors.primaryText }}>
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
           Transforming Spaces, Creating Experiences
         </h1>
-        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          <strong>AZLAAN CONTRACTING W.L.L</strong> brings your vision to life through
-          <strong> event planning</strong> and
-          <strong> luxury interior design</strong> solutions for both
-          <strong> offices</strong> and <strong>homes</strong>. We craft elegance and functionality in every project.
+        <p className="text-lg leading-relaxed" style={{ color: colors.subtitle }}>
+          <strong>AZLAAN CONTRACTING W.L.L</strong> brings your vision to life through{" "}
+          <strong>event planning</strong> and <strong>luxury interior design</strong> solutions for both{" "}
+          <strong>offices</strong> and <strong>homes</strong>. We craft elegance and functionality in every project.
         </p>
 
         {/* Action Buttons */}
@@ -88,8 +88,8 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Right Image Slider */}
-      <div className="flex-1 mt-10 lg:mt-0 max-w-xl w-full">
+      {/* Right Slider */}
+      <div className="flex-1 mt-12 lg:mt-0 max-w-xl w-full">
         <Slider {...sliderSettings}>
           {images.map((src, index) => (
             <div key={index} className="flex justify-center items-center">

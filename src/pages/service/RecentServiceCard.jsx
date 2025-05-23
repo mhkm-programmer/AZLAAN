@@ -9,244 +9,308 @@ const MyServices = () => {
 
 const [Services, setServices] = useState([
   {
-    id: 2,
-    title: "Supply and Installation of Premium Carpets",
-    description:
-      "AZLAAN CONTRACTING W.L.L provides high-quality carpet supply and expert installation services tailored to residential, commercial, and hospitality environments. Our carpets are selected for durability, comfort, and style, enhancing any space with professional craftsmanship.",
-    image: [
-      "https://example.com/images/carpets-main.jpg" // Replace with your real main carpet image URL
-    ],
-    galleryImage: [
-      "https://example.com/images/carpet1.jpg",
-      "https://example.com/images/carpet2.jpg",
-      "https://example.com/images/carpet3.jpg",
-      "https://example.com/images/carpet4.jpg",
-      "https://example.com/images/carpet5.jpg"
-    ],
-    keyFeatures: [
-      "Wide range of carpet types: wool, nylon, polypropylene, and blends",
-      "Custom sizing and fitting for any room shape",
-      "Professional cleaning and maintenance services available",
-      "Durable, stain-resistant, and fade-resistant options",
-      "Eco-friendly and hypoallergenic carpet options"
-    ],
-    technologies: [
-      "Advanced carpet laying techniques ensuring smooth finish",
-      "Use of high-quality adhesives and tack strips for secure installation",
-      "Anti-microbial and anti-static treatments available",
-      "Precision cutting with modern carpet knives and tools",
-      "Moisture barrier and underlay installation for comfort and durability"
-    ],
-    githubLink: "https://github.com/your-username/carpets-project", // if applicable
-    liveDemoLink: "https://www.example.com/azlaan-carpets", // your live demo or website page
-    faceBook: "https://www.facebook.com/azlaan.contracting", // replace with real page if exists
-    instaGram: "https://www.instagram.com/azlaan.contracting"  // replace with real page if exists
-  },
+  id: 1,
+  title: "Exhibition Stand Design & Build",
+  description:
+    "AZLAAN CONTRACTING W.L.L delivers creative and fully customized exhibition stands that captivate attention and enhance brand presence at trade shows and expos.",
+  image: [
+    "https://example.com/images/exhibition-stand-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/exhibition-stand1.jpg",
+    "https://example.com/images/exhibition-stand2.jpg",
+    "https://example.com/images/exhibition-stand3.jpg",
+    "https://example.com/images/exhibition-stand4.jpg"
+  ],
+  keyFeatures: [
+    "Custom-built to brand specifications",
+    "Modern and eye-catching designs",
+    "Durable materials and quick installation",
+    "Interactive and functional layouts",
+    "Lighting and branding integration"
+  ],
+  technologies: [
+    "3D CAD modeling",
+    "Lightweight aluminum framing",
+    "Modular display systems",
+    "Digital printing & LED lighting",
+    "Sustainable construction materials"
+  ],
+  githubLink: "https://github.com/your-username/exhibition-stands",
+  liveDemoLink: "https://www.example.com/azlaan-exhibition-stands",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
   {
-    id: 3,
-    title: "Supply and Installation of Premium Parquet Flooring",
-    description:
-      "AZLAAN CONTRACTING W.L.L specializes in supplying and installing high-quality parquet flooring that combines elegance and durability. Our parquet floors are crafted from premium woods, designed to enhance the aesthetics of residential, commercial, and hospitality spaces with timeless patterns and expert workmanship.",
-    image: [
-      "https://example.com/images/parquet-main.jpg" // Replace with your actual parquet main image URL
-    ],
-    galleryImage: [
-      "https://example.com/images/parquet1.jpg",
-      "https://example.com/images/parquet2.jpg",
-      "https://example.com/images/parquet3.jpg",
-      "https://example.com/images/parquet4.jpg",
-      "https://example.com/images/parquet5.jpg"
-    ],
-    keyFeatures: [
-      "Wide selection of wood species including oak, maple, and walnut",
-      "Various parquet patterns: herringbone, chevron, basket weave, and more",
-      "Precision installation ensuring smooth, level surfaces",
-      "Durable finishes that resist wear, scratches, and stains",
-      "Customizable options to match your interior design"
-    ],
-    technologies: [
-      "Advanced wood treatment for moisture resistance and longevity",
-      "State-of-the-art sanding and polishing equipment",
-      "Eco-friendly finishes with low VOC emissions",
-      "Precision cutting tools for perfect pattern alignment",
-      "Use of high-quality adhesives and underlays for stability"
-    ],
-    githubLink: "https://github.com/your-username/parquet-flooring-project", // optional
-    liveDemoLink: "https://www.example.com/azlaan-parquet", // your project or company site
-    faceBook: "https://www.facebook.com/azlaan.contracting", // your FB page
-    instaGram: "https://www.instagram.com/azlaan.contracting" // your Instagram page
-  },
+  id: 2,
+  title: "Event Planning & Management",
+  description:
+    "We provide end-to-end event planning services, from concept to execution, ensuring flawless experiences for all types of corporate and private gatherings.",
+  image: [
+    "https://example.com/images/event-management-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/event1.jpg",
+    "https://example.com/images/event2.jpg",
+    "https://example.com/images/event3.jpg",
+    "https://example.com/images/event4.jpg"
+  ],
+  keyFeatures: [
+    "Customized themes and setups",
+    "Full logistics and coordination",
+    "On-site support and execution",
+    "Audio-visual & lighting services",
+    "Vendor and guest management"
+  ],
+  technologies: [
+    "Project management tools",
+    "Automated guest check-ins",
+    "Event mapping software",
+    "High-end AV systems",
+    "Smart scheduling solutions"
+  ],
+  githubLink: "https://github.com/your-username/event-management",
+  liveDemoLink: "https://www.example.com/azlaan-events",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
   
   {
-    id: 4,
-    title: "Supply and Installation of Hospital-Grade Vinyl Flooring",
-    description:
-      "AZLAAN CONTRACTING W.L.L provides specialized supply and installation of hospital-grade vinyl flooring designed to meet stringent healthcare standards. Our vinyl flooring solutions offer durability, easy maintenance, and superior hygiene, making them ideal for medical facilities, clinics, and laboratories.",
-    image: [
-      "https://example.com/images/hospital-vinyl-main.jpg" // Replace with your actual hospital vinyl main image URL
-    ],
-    galleryImage: [
-      "https://example.com/images/hospital-vinyl1.jpg",
-      "https://example.com/images/hospital-vinyl2.jpg",
-      "https://example.com/images/hospital-vinyl3.jpg",
-      "https://example.com/images/hospital-vinyl4.jpg",
-      "https://example.com/images/hospital-vinyl5.jpg"
-    ],
-    keyFeatures: [
-      "Antimicrobial and hygienic surface",
-      "Slip-resistant and safe for high-traffic areas",
-      "Chemical and stain resistant",
-      "Seamless installation to prevent bacterial growth",
-      "Easy to clean and maintain with hospital-grade disinfectants"
-    ],
-    technologies: [
-      "Heterogeneous and homogeneous vinyl formulations",
-      "Heat-welded seams for moisture protection",
-      "Advanced anti-slip coatings",
-      "Low-VOC and eco-friendly materials",
-      "Precision installation tools for smooth, gap-free surfaces"
-    ],
-    githubLink: "https://github.com/your-username/hospital-vinyl-flooring-project", // optional
-    liveDemoLink: "https://www.example.com/azlaan-hospital-vinyl", // your project or company site
-    faceBook: "https://www.facebook.com/azlaan.contracting",
-    instaGram: "https://www.instagram.com/azlaan.contracting"
-  },
+  id: 3,
+  title: "Wedding Decorations & Setup",
+  description:
+    "AZLAAN CONTRACTING W.L.L offers stunning and personalized wedding decoration services, creating unforgettable atmospheres with elegance and creativity.",
+  image: [
+    "https://example.com/images/wedding-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/wedding1.jpg",
+    "https://example.com/images/wedding2.jpg",
+    "https://example.com/images/wedding3.jpg",
+    "https://example.com/images/wedding4.jpg"
+  ],
+  keyFeatures: [
+    "Custom wedding stage and aisle design",
+    "Floral arrangements and lighting",
+    "Venue theming and drapery",
+    "Guest seating and décor planning",
+    "Pre-event consultation and planning"
+  ],
+  technologies: [
+    "3D event layout software",
+    "LED lighting and effects",
+    "Fabric draping systems",
+    "Floral preservation techniques",
+    "Mood and ambiance control tech"
+  ],
+  githubLink: "https://github.com/your-username/wedding-services",
+  liveDemoLink: "https://www.example.com/azlaan-weddings",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
   {
-    id: 5,
-    title: "Design and Build of Mall Kiosks",
-    description:
-      "AZLAAN CONTRACTING W.L.L specializes in designing and building custom mall kiosks that attract customers and maximize retail space efficiency. Our turnkey solutions include concept development, construction, and installation, tailored to meet your brand identity and business needs.",
-    image: [
-      "https://example.com/images/mall-kiosk-main.jpg" // Replace with your actual image URL
-    ],
-    galleryImage: [
-      "https://example.com/images/mall-kiosk1.jpg",
-      "https://example.com/images/mall-kiosk2.jpg",
-      "https://example.com/images/mall-kiosk3.jpg",
-      "https://example.com/images/mall-kiosk4.jpg"
-    ],
-    keyFeatures: [
-      "Custom design matching your brand",
-      "Efficient use of limited mall space",
-      "Durable and attractive materials",
-      "Compliance with mall regulations",
-      "Turnkey service from design to installation"
-    ],
-    technologies: [
-      "3D modeling and rendering",
-      "Modular construction techniques",
-      "High-quality wood, glass, and metal materials",
-      "LED lighting integration",
-      "Precision fabrication tools"
-    ],
-    githubLink: "https://github.com/your-username/mall-kiosk-project",
-    liveDemoLink: "https://www.example.com/azlaan-mall-kiosk",
-    faceBook: "https://www.facebook.com/azlaan.contracting",
-    instaGram: "https://www.instagram.com/azlaan.contracting"
-  },
+  id: 4,
+  title: "Conference Setup & Solutions",
+  description:
+    "We provide turnkey conference setup services including stage design, seating, lighting, sound, and branding — ideal for corporate and business events.",
+  image: [
+    "https://example.com/images/conference-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/conference1.jpg",
+    "https://example.com/images/conference2.jpg",
+    "https://example.com/images/conference3.jpg",
+    "https://example.com/images/conference4.jpg"
+  ],
+  keyFeatures: [
+    "Complete audio-visual setup",
+    "Podium and stage setup",
+    "Backdrops and branding",
+    "Delegate seating arrangements",
+    "Networking and lounge zones"
+  ],
+  technologies: [
+    "Professional AV systems",
+    "Wireless mic & PA systems",
+    "Modular stage platforms",
+    "Branded projection screens",
+    "Lighting control software"
+  ],
+  githubLink: "https://github.com/your-username/conference-solutions",
+  liveDemoLink: "https://www.example.com/azlaan-conferences",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
   
   {
-    id: 6,
-    title: "Design and Build of Exhibition Stands",
-    description:
-      "AZLAAN CONTRACTING W.L.L offers professional design and build services for exhibition stands, helping your brand stand out at trade shows and events. We provide innovative and customizable stands designed to engage visitors and showcase your products effectively.",
-    image: [
-      "https://example.com/images/exhibition-stand-main.jpg"
-    ],
-    galleryImage: [
-      "https://example.com/images/exhibition-stand1.jpg",
-      "https://example.com/images/exhibition-stand2.jpg",
-      "https://example.com/images/exhibition-stand3.jpg",
-      "https://example.com/images/exhibition-stand4.jpg"
-    ],
-    keyFeatures: [
-      "Customizable modular designs",
-      "Quick assembly and disassembly",
-      "Integrated lighting and multimedia",
-      "Sturdy and transport-friendly materials",
-      "Brand-focused creative concepts"
-    ],
-    technologies: [
-      "CAD and 3D design software",
-      "Lightweight aluminum framing",
-      "Digital printing and graphics",
-      "LED and ambient lighting systems",
-      "Efficient logistics and installation tools"
-    ],
-    githubLink: "https://github.com/your-username/exhibition-stands-project",
-    liveDemoLink: "https://www.example.com/azlaan-exhibition-stands",
-    faceBook: "https://www.facebook.com/azlaan.contracting",
-    instaGram: "https://www.instagram.com/azlaan.contracting"
-  },
+  id: 5,
+  title: "Custom Furniture Supply",
+  description:
+    "AZLAAN provides premium-quality, custom-built furniture for homes, offices, and event setups, blending comfort, design, and functionality.",
+  image: [
+    "https://example.com/images/furniture-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/furniture1.jpg",
+    "https://example.com/images/furniture2.jpg",
+    "https://example.com/images/furniture3.jpg",
+    "https://example.com/images/furniture4.jpg"
+  ],
+  keyFeatures: [
+    "Modern and ergonomic designs",
+    "High-quality wood and upholstery",
+    "Custom dimensions and finishes",
+    "Bulk supply for events and offices",
+    "Delivery and on-site setup"
+  ],
+  technologies: [
+    "3D furniture modeling",
+    "Precision CNC cutting",
+    "Anti-scratch laminate finishes",
+    "Eco-friendly materials",
+    "Ergonomic design tools"
+  ],
+  githubLink: "https://github.com/your-username/furniture-supply",
+  liveDemoLink: "https://www.example.com/azlaan-furniture",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
   
   
   {
-    id: 7,
-    title: "Premium Curtains Fabrics Supply",
-    description:
-      "AZLAAN CONTRACTING W.L.L supplies high-quality curtains fabrics that combine elegance, durability, and ease of maintenance. Our wide selection caters to both residential and commercial needs, available in various textures, colors, and patterns.",
-    image: [
-      "https://example.com/images/curtains-fabric-main.jpg"
-    ],
-    galleryImage: [
-      "https://example.com/images/curtains-fabric1.jpg",
-      "https://example.com/images/curtains-fabric2.jpg",
-      "https://example.com/images/curtains-fabric3.jpg",
-      "https://example.com/images/curtains-fabric4.jpg"
-    ],
-    keyFeatures: [
-      "Wide variety of fabric types and colors",
-      "Fade and stain resistant materials",
-      "Eco-friendly and non-toxic fabrics",
-      "Soft textures suitable for all interiors",
-      "Custom fabric sourcing upon request"
-    ],
-    technologies: [
-      "Advanced fabric weaving and dyeing",
-      "UV-resistant treatments",
-      "Fire-retardant coatings",
-      "Eco-friendly production processes",
-      "Quality control for durability"
-    ],
-    githubLink: "https://github.com/your-username/curtains-fabrics-project",
-    liveDemoLink: "https://www.example.com/azlaan-curtains-fabrics",
-    faceBook: "https://www.facebook.com/azlaan.contracting",
-    instaGram: "https://www.instagram.com/azlaan.contracting"
-  },
+  id: 6,
+  title: "Curtains Fabrics & Installation",
+  description:
+    "AZLAAN CONTRACTING W.L.L provides premium curtain fabrics and expert installation services for residential and commercial spaces.",
+  image: [
+    "https://example.com/images/curtains-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/curtains1.jpg",
+    "https://example.com/images/curtains2.jpg",
+    "https://example.com/images/curtains3.jpg",
+    "https://example.com/images/curtains4.jpg"
+  ],
+  keyFeatures: [
+    "Wide variety of fabrics and patterns",
+    "Precision measurements and fitting",
+    "Elegant and modern designs",
+    "Motorized curtain systems available",
+    "Customizable solutions for any space"
+  ],
+  technologies: [
+    "Automated curtain systems",
+    "Eco-friendly fabric options",
+    "UV-resistant materials",
+    "3D curtain visualization",
+    "Noise-reducing fabrics"
+  ],
+  githubLink: "https://github.com/your-username/curtains-installation",
+  liveDemoLink: "https://www.example.com/azlaan-curtains",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
   
   {
-    id: 8,
-    title: "Curtains Fittings and Accessories",
-    description:
-      "AZLAAN CONTRACTING W.L.L offers a comprehensive range of curtains fittings and accessories, including rods, tracks, hooks, and decorative elements. Our products are designed for easy installation, durability, and seamless integration with various curtain styles.",
-    image: [
-      "https://example.com/images/curtains-fittings-main.jpg"
-    ],
-    galleryImage: [
-      "https://example.com/images/curtains-fittings1.jpg",
-      "https://example.com/images/curtains-fittings2.jpg",
-      "https://example.com/images/curtains-fittings3.jpg",
-      "https://example.com/images/curtains-fittings4.jpg"
-    ],
-    keyFeatures: [
-      "Wide selection of materials and finishes",
-      "Easy to install and maintain",
-      "Compatible with all curtain types",
-      "Strong and corrosion-resistant hardware",
-      "Customizable decorative options"
-    ],
-    technologies: [
-      "Precision metal and wood crafting",
-      "Durable powder coating finishes",
-      "Smooth-operating track systems",
-      "Innovative curtain automation options",
-      "Ergonomic and aesthetic designs"
-    ],
-    githubLink: "https://github.com/your-username/curtains-fittings-project",
-    liveDemoLink: "https://www.example.com/azlaan-curtains-fittings",
-    faceBook: "https://www.facebook.com/azlaan.contracting",
-    instaGram: "https://www.instagram.com/azlaan.contracting"
-  },
+  id: 7,
+  title: "Carpet Flooring Supply & Installation",
+  description:
+    "We supply and install high-quality carpets tailored to enhance the comfort and aesthetics of your interior spaces.",
+  image: [
+    "https://example.com/images/carpet-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/carpet1.jpg",
+    "https://example.com/images/carpet2.jpg",
+    "https://example.com/images/carpet3.jpg",
+    "https://example.com/images/carpet4.jpg"
+  ],
+  keyFeatures: [
+    "Residential and commercial solutions",
+    "Stain and wear-resistant options",
+    "Custom patterns and sizes",
+    "Anti-slip backing available",
+    "Expert measurement and fitting"
+  ],
+  technologies: [
+    "Advanced tufting techniques",
+    "Anti-static fibers",
+    "Thermal insulation materials",
+    "Eco-friendly adhesives",
+    "Modular carpet tiles"
+  ],
+  githubLink: "https://github.com/your-username/carpet-installation",
+  liveDemoLink: "https://www.example.com/azlaan-carpet",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
+{
+  id: 8,
+  title: "Parquet Flooring Solutions",
+  description:
+    "AZLAAN CONTRACTING W.L.L offers elegant parquet flooring that blends durability, style, and natural beauty for luxury interiors.",
+  image: [
+    "https://example.com/images/parquet-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/parquet1.jpg",
+    "https://example.com/images/parquet2.jpg",
+    "https://example.com/images/parquet3.jpg",
+    "https://example.com/images/parquet4.jpg"
+  ],
+  keyFeatures: [
+    "Premium hardwood and laminate options",
+    "Geometric and classic styles",
+    "Scratch and moisture resistant",
+    "Precision installation",
+    "Low maintenance finish"
+  ],
+  technologies: [
+    "Tongue-and-groove locking system",
+    "UV-cured coating",
+    "Moisture barrier underlay",
+    "Acoustic dampening layers",
+    "3D layout planning tools"
+  ],
+  githubLink: "https://github.com/your-username/parquet-flooring",
+  liveDemoLink: "https://www.example.com/azlaan-parquet",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
+{
+  id: 9,
+  title: "Hospital Vinyl Flooring",
+  description:
+    "We provide hygienic, anti-bacterial vinyl flooring solutions ideal for hospitals, clinics, and healthcare facilities.",
+  image: [
+    "https://example.com/images/vinyl-main.jpg"
+  ],
+  galleryImage: [
+    "https://example.com/images/vinyl1.jpg",
+    "https://example.com/images/vinyl2.jpg",
+    "https://example.com/images/vinyl3.jpg",
+    "https://example.com/images/vinyl4.jpg"
+  ],
+  keyFeatures: [
+    "Seamless and easy to clean",
+    "Anti-bacterial and slip-resistant",
+    "Durable in high-traffic areas",
+    "Chemical and stain resistant",
+    "Meets healthcare safety standards"
+  ],
+  technologies: [
+    "Seam-welded installation",
+    "Anti-microbial coatings",
+    "Cushioned back layers",
+    "Non-toxic adhesives",
+    "Color-coded zoning designs"
+  ],
+  githubLink: "https://github.com/your-username/hospital-vinyl",
+  liveDemoLink: "https://www.example.com/azlaan-hospital-vinyl",
+  faceBook: "https://www.facebook.com/azlaan.contracting",
+  instaGram: "https://www.instagram.com/azlaan.contracting"
+},
+
   
   
   
@@ -340,207 +404,201 @@ const shortTextLength = 100; // Adjust the character limit
   const displayedServices = showAllServices ? Services : Services.slice(0, 15);
 
   return (
-    <div className="  px-6 py-8 lg:py-10 bg-[#F5F5DC] dark:bg-gray-800 dark:text-gray-100">
-      {/* Header Section */}
-      <h1 className="text-center text-3xl font-bold mb-4">Our <span className="text-[#6B4226]">Services</span></h1>
-      <h2 className="text-center text-lg font-semibold mb-12">
-        Delivering High-Quality Solutions to Meet Your Needs
-      </h2>
+  <div className="px-6 py-8 lg:py-10 bg-[#F2EDE6] dark:bg-gray-800 dark:text-gray-100">
+    {/* Header Section */}
+    <h1 className="text-center text-3xl font-bold mb-4">
+      Explore Our <span className="text-[#6B4226]">Specialized Services</span>
+    </h1>
+    <h2 className="text-center text-lg font-medium text-gray-700 mb-12">
+      Innovative Event & Interior Solutions Designed to Transform Spaces and Experiences
+    </h2>
 
-      {/* Reference for scrolling back */}
-      <div ref={servicesRef}></div>
+    {/* Reference for scrolling back */}
+    <div ref={servicesRef}></div>
 
-      {/* Display Project Details or Services */}
-      {selectedProject ? (
-        <Transition in={true} timeout={300} mountOnEnter unmountOnExit>
-          {(state) => (
-            <div
-      ref={detailsRef} // Attach ref for scrolling to details section
-      className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 transition-all duration-300"
-    >
-      {/* Project Image */}
-      <div className="mb-6 overflow-hidden rounded-lg shadow-md">
-        <img
-          src={selectedProject.image}
-          alt={selectedProject.title}
-          className=" w-full object-cover"
-        />
-      </div>
-
-      {/* Project Title & Description */}
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-3">
-          {selectedProject.title}
-        </h2>
-        <p className="text-gray-600 leading-relaxed">{selectedProject.description}</p>
-      </div>
-
-      {/* Key Features Section */}
-      {selectedProject.keyFeatures?.length > 0 && (
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Key Features</h3>
-          <ul className="list-disc list-inside text-gray-600">
-            {selectedProject.keyFeatures.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Technologies Section */}
-      {selectedProject.technologies?.length > 0 && (
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Technologies Used</h3>
-          <ul className="list-disc list-inside text-gray-600">
-            {selectedProject.technologies.map((technology, index) => (
-              <li key={index}>{technology}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Work Gallery Section */}
-      {selectedProject.galleryImage?.length > 0 && (
-        <div className="mt-8">
-          <h1 className="text-center text-3xl font-bold text-gray-800 mb-4">
-            Work Gallery of {selectedProject.title}
-          </h1>
-        
-
-          <div className="flex flex-wrap -m-1">
-  {/* First Column */}
-  <div className="flex flex-wrap w-full md:w-1/2">
-    {selectedProject.galleryImage.slice(0, 3).map((gallery, index) => (
-      <div
-        key={index}
-        className={`p-1 w-full ${index === 2 ? "md:w-full" : "md:w-1/2"}`}
-      >
-        <img
-          alt="gallery"
-          className="w-full object-cover h-48 md:h-full rounded-lg shadow-md"
-          src={gallery}
-        />
-      </div>
-    ))}
-  </div>
-
-  {/* Second Column */}
-  <div className="flex flex-wrap w-full md:w-1/2">
-    {selectedProject.galleryImage.slice(3, 6).map((gallery, index) => (
-      <div
-        key={index}
-        className={`p-1 w-full ${index === 0 ? "md:w-full" : "md:w-1/2"}`}
-      >
-        <img
-          alt="gallery"
-          className="w-full object-cover h-48 md:h-full rounded-lg shadow-md"
-          src={gallery}
-        />
-      </div>
-    ))}
-  </div>
-</div>
-        </div>
-      )}
-
-      {/* Back to Services Button */}
-      {/* <div className="flex justify-center pt-6">
-        <button
-          className="flex items-center bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 hover:drop-shadow-lg  transition"
-          onClick={handleCloseProject}
-        >
-          <FaArrowLeft className="mr-2" size={16} /> Back to Services
-        </button>
-      </div> */}
-      <div className="flex justify-center pt-6 gap-4 flex-wrap">
-  {/* Back to Services Button */}
-  <div>
-    <button
-      className={`btn-hero bg-[#6B4226] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#8B5A2B] transition-all duration-300 ${
-        activeTheme === "dark" ? "dark-mode-text" : ""
-      } text-base sm:text-lg md:text-xl`}
-      onClick={handleCloseProject}
-    >
-      <FaArrowLeft className="mr-2 text-lg sm:text-xl" /> Back to Services
-    </button>
-  </div>
-
-  {/* Book an Appointment Button (WhatsApp) */}
-  <div>
-    <a
-      href="https://wa.me/+97455760872" // Replace with your WhatsApp number
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-full btn-hero flex items-center bg-[#27ae60] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#219653] transition-all duration-300 text-base sm:text-lg md:text-xl"
-    >
-      Book an Appointment <FaWhatsapp className="ml-2 text-lg sm:text-xl" />
-    </a>
-  </div>
-</div>
-
-
-
-      
-    </div>
-          )}
-        </Transition>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
-      {displayedServices.map((project) => (
-        <Transition key={project.id} in={true} timeout={300} mountOnEnter unmountOnExit>
-          {(state) => (
-            <div
-              className={`bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 ${state} flex flex-col`}
-            >
-              {/* Project Image */}
-              <img src={project.image} alt={project.title} className="w-full rounded-lg mb-4" />
-
-              {/* Project Title */}
-              <h2 className="text-xl font-semibold mb-2 px-4">{project.title}</h2>
-
-              {/* Project Description with Read More */}
-              <p className="text-gray-500 mb-4 px-4">
-                {expandedCards[project.id]
-                  ? project.description
-                  : `${project.description.slice(0, shortTextLength)}...`}
-                {project.description.length > shortTextLength && (
-                  <button
-                    onClick={() => toggleReadMore(project.id)}
-                    className="text-blue-600 hover:underline ml-2"
-                  >
-                    {expandedCards[project.id] ? "Show Less" : "Read More"}
-                  </button>
-                )}
-              </p>
-
-              {/* Buttons Section */}
-              <div className="p-4 flex flex-wrap justify-center mt-auto gap-4">
-                {/* Details More Button */}
-                <button
-                  className="w-full btn-hero bg-[#6B4226] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B5A2B] transition-all duration-300"
-                  onClick={() => handleProjectClick(project)}
-                >
-                  Details More <FaArrowRight className="ml-2 text-xl sm:text-2xl" />
-                </button>
-
-                {/* Book an Appointment Button (WhatsApp) */}
-                <a
-                  href="https://wa.me/+97455760872"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-hero flex items-center bg-[#27ae60] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#219653] transition-all duration-300"
-                >
-                  Book an Appointment <FaWhatsapp className="ml-2 text-xl sm:text-2xl" />
-                </a>
-              </div>
+    {selectedProject ? (
+      <Transition in={true} timeout={300} mountOnEnter unmountOnExit>
+        {(state) => (
+          <div
+            ref={detailsRef}
+            className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 p-8 transition-all duration-300"
+          >
+            {/* Project Image */}
+            <div className="mb-8 overflow-hidden rounded-2xl shadow-lg border border-gray-200">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full object-cover h-[320px] sm:h-[400px] rounded-2xl"
+              />
             </div>
-          )}
-        </Transition>
-      ))}
-    </div>
-      )}
-    </div>
-  );
+
+            {/* Title & Description */}
+            <div className="text-center mb-6">
+              <h2 className="text-4xl font-bold text-[#3E2723] mb-4">
+                {selectedProject.title}
+              </h2>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {selectedProject.description}
+              </p>
+            </div>
+
+            {/* Key Features */}
+            {selectedProject.keyFeatures?.length > 0 && (
+              <div className="mt-8">
+                <h3 className="text-2xl font-semibold text-[#3E2723] mb-3">Key Features</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 pl-2">
+                  {selectedProject.keyFeatures.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Technologies Used */}
+            {selectedProject.technologies?.length > 0 && (
+              <div className="mt-8">
+                <h3 className="text-2xl font-semibold text-[#3E2723] mb-3">Technologies Used</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 pl-2">
+                  {selectedProject.technologies.map((technology, index) => (
+                    <li key={index}>{technology}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Gallery */}
+            {selectedProject.galleryImage?.length > 0 && (
+              <div className="mt-10">
+                <h2 className="text-center text-3xl font-bold text-[#3E2723] mb-6">
+                  Work Gallery of {selectedProject.title}
+                </h2>
+
+                <div className="flex flex-wrap -m-1">
+                  {/* Left Column */}
+                  <div className="flex flex-wrap w-full md:w-1/2">
+                    {selectedProject.galleryImage.slice(0, 3).map((gallery, index) => (
+                      <div
+                        key={index}
+                        className={`p-1 w-full ${index === 2 ? "md:w-full" : "md:w-1/2"}`}
+                      >
+                        <img
+                          src={gallery}
+                          alt={`Gallery ${index + 1}`}
+                          className="w-full object-cover h-48 md:h-[200px] rounded-lg shadow-md border border-gray-100"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Right Column */}
+                  <div className="flex flex-wrap w-full md:w-1/2">
+                    {selectedProject.galleryImage.slice(3, 6).map((gallery, index) => (
+                      <div
+                        key={index}
+                        className={`p-1 w-full ${index === 0 ? "md:w-full" : "md:w-1/2"}`}
+                      >
+                        <img
+                          src={gallery}
+                          alt={`Gallery ${index + 4}`}
+                          className="w-full object-cover h-48 md:h-[200px] rounded-lg shadow-md border border-gray-100"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Buttons */}
+            <div className="flex justify-center pt-10 gap-4 flex-wrap">
+              <button
+                onClick={handleCloseProject}
+                className={`flex items-center justify-center bg-[#3E2723] text-white px-8 py-3 rounded-2xl font-medium shadow-md hover:bg-[#5D4037] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-base sm:text-lg md:text-xl ${
+                  activeTheme === "dark" ? "dark-mode-text" : ""
+                }`}
+              >
+                <FaArrowLeft className="mr-2 text-lg sm:text-xl" />
+                Back to Services
+              </button>
+
+              <a
+                href="https://wa.me/+97455760872"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center bg-[#1F8A5F] text-white px-8 py-3 rounded-2xl font-medium shadow-md hover:bg-[#157347] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-base sm:text-lg md:text-xl"
+              >
+                Book an Appointment
+                <FaWhatsapp className="ml-2 text-lg sm:text-xl" />
+              </a>
+            </div>
+          </div>
+        )}
+      </Transition>
+    ) : (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+        {displayedServices.map((project) => (
+          <Transition key={project.id} in={true} timeout={300} mountOnEnter unmountOnExit>
+            {(state) => (
+              <div
+                className={`bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 ${state} flex flex-col`}
+              >
+                {/* Project Image */}
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover rounded-t-2xl"
+                  />
+                </div>
+
+                {/* Project Title */}
+                <h2 className="text-2xl font-bold text-gray-800 px-6 pt-5">
+                  {project.title}
+                </h2>
+
+                {/* Project Description with Read More */}
+                <p className="text-gray-600 text-base px-6 pt-3 pb-5 leading-relaxed">
+                  {expandedCards[project.id]
+                    ? project.description
+                    : `${project.description.slice(0, shortTextLength)}...`}
+                  {project.description.length > shortTextLength && (
+                    <button
+                      onClick={() => toggleReadMore(project.id)}
+                      className="text-[#1976D2] font-medium hover:underline ml-2"
+                    >
+                      {expandedCards[project.id] ? "Show Less" : "Read More"}
+                    </button>
+                  )}
+                </p>
+
+                {/* Action Buttons */}
+                <div className="px-6 pb-6 mt-auto flex flex-col sm:flex-row gap-4">
+                  <button
+                    onClick={() => handleProjectClick(project)}
+                    className="flex-1 bg-[#3E2723] text-white py-3 rounded-xl font-semibold shadow-md hover:bg-[#5D4037] hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+                  >
+                    View Details
+                    <FaArrowRight className="ml-2" />
+                  </button>
+
+                  <a
+                    href="https://wa.me/+97455760872"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-[#1F8A5F] text-white py-3 rounded-xl font-semibold shadow-md hover:bg-[#157347] hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+                  >
+                    Book Appointment
+                    <FaWhatsapp className="ml-2" />
+                  </a>
+                </div>
+              </div>
+            )}
+          </Transition>
+        ))}
+      </div>
+    )}
+  </div>
+);
 };
 
 export default MyServices;

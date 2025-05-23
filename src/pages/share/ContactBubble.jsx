@@ -14,64 +14,65 @@ const ContactBubble = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showScrollBottom, setShowScrollBottom] = useState(true);
 
-  // Check screen size
   useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+    const checkScreenSize = () => setIsMobile(window.innerWidth < 768);
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // Handle scroll visibility
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
-
       setShowScrollTop(scrollTop > 100);
       setShowScrollBottom(scrollTop + clientHeight < scrollHeight - 100);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll functions
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   const scrollToBottom = () =>
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
 
+  const iconSize = isMobile ? 20 : 26;
+  const commonClasses =
+    "p-3 rounded-full shadow-lg transition hover:scale-110 duration-300";
+
   return (
     <>
-      {/* 🟢 Contact Bubble - No Longer Draggable */}
+      {/* 🌐 Contact Shortcuts */}
       <div className="fixed bottom-32 right-5 flex flex-col items-center space-y-3 z-50">
+
         {/* WhatsApp */}
         <a
           href="https://wa.me/+97455760872"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-4 rounded-full text-white bg-green-500 hover:bg-green-600 shadow-md transition"
+          title="Chat on WhatsApp"
+          className={`${commonClasses} bg-green-500 text-white hover:bg-green-600`}
         >
-          <FaWhatsapp size={isMobile ? 22 : 28} />
+          <FaWhatsapp size={iconSize} />
         </a>
 
         {/* Phone */}
         <a
           href="tel:+97455760872"
-          className="p-4 rounded-full text-white bg-blue-500 hover:bg-blue-600 shadow-md transition"
+          title="Call Us"
+          className={`${commonClasses} bg-sky-600 text-white hover:bg-sky-700`}
         >
-          <FaPhoneAlt size={isMobile ? 22 : 28} />
+          <FaPhoneAlt size={iconSize} />
         </a>
 
         {/* Email */}
         <a
           href="mailto:qatarwintrading@gmail.com"
-          className="p-4 rounded-full text-white bg-red-500 hover:bg-red-600 shadow-md transition"
+          title="Send Email"
+          className={`${commonClasses} bg-amber-600 text-white hover:bg-amber-700`}
         >
-          <FaEnvelope size={isMobile ? 22 : 28} />
+          <FaEnvelope size={iconSize} />
         </a>
 
         {/* Instagram */}
@@ -79,9 +80,10 @@ const ContactBubble = () => {
           href="https://www.instagram.com/rokibwin?igsh=anU3ejd4dHFneDhi"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-4 rounded-full text-white bg-pink-500 hover:bg-pink-600 shadow-md transition"
+          title="Instagram"
+          className={`${commonClasses} bg-pink-500 text-white hover:bg-pink-600`}
         >
-          <FaInstagram size={isMobile ? 22 : 28} />
+          <FaInstagram size={iconSize} />
         </a>
 
         {/* Facebook */}
@@ -89,27 +91,30 @@ const ContactBubble = () => {
           href="https://www.facebook.com/profile.php?id=61573137238181&mibextid=ZbWKwL"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-4 rounded-full text-white bg-blue-700 hover:bg-blue-800 shadow-md transition"
+          title="Facebook Page"
+          className={`${commonClasses} bg-indigo-700 text-white hover:bg-indigo-800`}
         >
-          <FaFacebook size={isMobile ? 22 : 28} />
+          <FaFacebook size={iconSize} />
         </a>
       </div>
 
-      {/* 🔵 Scroll to Top Button */}
+      {/* 🔝 Scroll to Top */}
       {showScrollTop && (
         <button
-          className="fixed bottom-16 right-5 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-900 transition"
           onClick={scrollToTop}
+          title="Back to Top"
+          className="fixed bottom-16 right-5 bg-neutral-800 text-white p-3 rounded-full shadow-lg hover:bg-neutral-900 transition"
         >
           <FaArrowUp size={24} />
         </button>
       )}
 
-      {/* 🔴 Scroll to Bottom Button */}
+      {/* 🔚 Scroll to Bottom */}
       {showScrollBottom && (
         <button
-          className="fixed bottom-5 right-5 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-900 transition"
           onClick={scrollToBottom}
+          title="Scroll to Bottom"
+          className="fixed bottom-5 right-5 bg-neutral-800 text-white p-3 rounded-full shadow-lg hover:bg-neutral-900 transition"
         >
           <FaArrowDown size={24} />
         </button>

@@ -1,74 +1,74 @@
 import React from "react";
 
 const WhyChoose = () => {
+  const cards = [
+    {
+      icon: "https://8upload.com/image/67a000235804f/Premium_Furniture.jpg",
+      titleEn: "Tailored Flooring",
+      titleAr: "أرضيات مصممة خصيصاً",
+      descEn: "Precision-installed laminate, SPC, and parquet floors to enhance every environment.",
+      descAr: "تركيب احترافي للأرضيات اللامينيت وSPC والباركيه بأسلوب راقٍ.",
+    },
+    {
+      icon: "https://8upload.com/image/67a000233869c/Skilled_Upholstery.jpg",
+      titleEn: "Elegant Curtains",
+      titleAr: "ستائر أنيقة",
+      descEn: "Custom curtain solutions with premium fabrics and stylish finishes.",
+      descAr: "تصاميم ستائر مخصصة بأقمشة فاخرة وتفاصيل أنيقة.",
+    },
+    {
+      icon: "https://8upload.com/image/67a0002314733/Modern_Interior_Design.jpg",
+      titleEn: "Exhibition Kiosks",
+      titleAr: "أكشاك المعارض",
+      descEn: "Visually striking and durable kiosks for exhibitions and promotional events.",
+      descAr: "أكشاك عرض متينة ومبتكرة للمناسبات والمعارض.",
+    },
+    {
+      icon: "https://8upload.com/image/67a00022e0e7f/Affordable_Pricing.jpg",
+      titleEn: "Affordable Excellence",
+      titleAr: "جودة بأسعار مناسبة",
+      descEn: "Exceptional craftsmanship with competitive pricing to suit all budgets.",
+      descAr: "حرفية عالية بأسعار مناسبة تلائم جميع الميزانيات.",
+    },
+  ];
+
   return (
-    <section className="bg-[#f9f9f6] dark:bg-gray-800 py-12 px-6">
+    <section className="bg-[#E9DED3] py-16 px-6">
       <div className="max-w-7xl mx-auto text-center">
         {/* Logo */}
-        <div className="mb-6">
+        <div className="mb-8">
           <img
             src="https://8upload.com/image/67a01c3b4ad22/Al-FWZ.jpg"
             alt="AZLAAN Logo"
-            className="h-20 w-20 mx-auto rounded-full shadow-md"
+            className="h-24 w-24 mx-auto rounded-full shadow-lg"
           />
         </div>
 
-        {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
+        {/* Section Title */}
+        <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] mb-4">
           Why Choose <span className="text-[#6B4226]">AZLAAN Contracting W.L.L</span>
         </h2>
-        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
-          Your trusted partner in premium flooring, curtain, kiosk & exhibition stand solutions across Qatar.
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-14">
+          Trusted across Qatar for custom flooring, luxurious curtains, modern kiosks, and exhibition stands.
         </p>
 
-        {/* Grid Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            {
-              icon: "https://8upload.com/image/67a000235804f/Premium_Furniture.jpg",
-              titleEn: "Tailored Flooring",
-              titleAr: "أرضيات مصممة خصيصاً",
-              descEn: "Expertly installed laminate, SPC, and parquet floors that elevate your space.",
-              descAr: "تركيب احترافي للأرضيات اللامينيت وSPC والباركيه لإضفاء لمسة فاخرة.",
-            },
-            {
-              icon: "https://8upload.com/image/67a000233869c/Skilled_Upholstery.jpg",
-              titleEn: "Elegant Curtains",
-              titleAr: "ستائر أنيقة",
-              descEn: "Custom-made curtain designs with quality fabrics and stylish fittings.",
-              descAr: "تصاميم ستائر مخصصة بأقمشة فاخرة وتركيبات عصرية.",
-            },
-            {
-              icon: "https://8upload.com/image/67a0002314733/Modern_Interior_Design.jpg",
-              titleEn: "Exhibition Kiosks",
-              titleAr: "أكشاك المعارض",
-              descEn: "Modern, durable kiosks & stands built to impress at every event.",
-              descAr: "أكشاك وحوامل متينة وعصرية لعرض أعمالكم بتميز في كل مناسبة.",
-            },
-            {
-              icon: "https://8upload.com/image/67a00022e0e7f/Affordable_Pricing.jpg",
-              titleEn: "Affordable Excellence",
-              titleAr: "جودة بأسعار مناسبة",
-              descEn: "Delivering top-tier craftsmanship without compromising your budget.",
-              descAr: "نوفر أفضل جودة بأقل تكلفة، بما يناسب جميع الميزانيات.",
-            },
-          ].map((card, index) => (
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-xl p-6 text-center shadow hover:shadow-xl transition duration-300"
+              className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl transition duration-300"
             >
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-[#f1e7da] dark:bg-[#d35400] flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-[#F6EFE6] flex items-center justify-center">
                 <img
                   src={card.icon}
-                  alt={`${card.titleEn} Icon`}
+                  alt={card.titleEn}
                   className="h-16 w-16 object-contain"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-                {card.titleEn}
-              </h3>
-              <p className="text-xs text-[#6B4226] mt-1">{card.titleAr}</p>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{card.descEn}</p>
+              <h3 className="text-xl font-semibold text-[#4A342E]">{card.titleEn}</h3>
+              <p className="text-sm text-[#6B4226] mb-2">{card.titleAr}</p>
+              <p className="text-sm text-gray-700">{card.descEn}</p>
               <p className="text-xs text-gray-500 mt-1">{card.descAr}</p>
             </div>
           ))}

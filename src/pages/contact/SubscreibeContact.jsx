@@ -3,10 +3,8 @@ import React, { useState } from "react";
 
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 
 const SubscribeContact = () => {
-  const [activeTheme] = useThemeSwitcher();
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState(null);
 
@@ -26,251 +24,371 @@ const SubscribeContact = () => {
       )
       .then(
         () => {
-          setStatus("Message sent successfully!");
+          setStatus("✅ تم إرسال الرسالة بنجاح! / Message sent successfully!");
           setFormData({ name: "", email: "", message: "" });
         },
         () => {
-          setStatus("Failed to send message. Please try again.");
+          setStatus("❌ فشل في إرسال الرسالة، حاول مرة أخرى. / Failed to send message, please try again.");
         }
       );
   };
 
-  // Define colors based on theme for consistent branding
-  const primaryColor = activeTheme === "dark" ? "#4F46E5" : "#3B82F6"; // Indigo-600 and Blue-500
-  const accentColor = activeTheme === "dark" ? "#9333EA" : "#8B5CF6"; // Purple-600 and Purple-500
-  const mutedText = activeTheme === "dark" ? "text-gray-300" : "text-gray-700";
-  const bgSecondary = activeTheme === "dark" ? "bg-gray-800" : "bg-gray-100";
-  const bgPrimary = activeTheme === "dark" ? "bg-gray-900" : "bg-white";
+  // Colors & fonts
+  const bgLight = "#F9FAFB";
+  const primaryText = "#2C3E50";
+  const accent = "#E67E22";
+  const inputBg = "#FFFFFF";
+  const inputBorder = "#CBD5E1";
+  const mutedText = "#64748B"; // Slate 500
+  const shadow = "0 6px 18px rgba(230, 126, 34, 0.15)"; // orange tinted shadow
+  const fontFamily = "'Tajawal', sans-serif";
 
   return (
-    <div className={`container mx-auto py-16 px-6 max-w-7xl`}>
+    <div
+      className="min-h-screen flex flex-col justify-center items-center px-6 py-16"
+      style={{ backgroundColor: bgLight, fontFamily }}
+    >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="text-center mb-16"
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl w-full text-center mb-14"
       >
         <h1
-          className="text-4xl md:text-5xl font-bold mb-4"
-          style={{ color: primaryColor }}
+          className="text-5xl font-extrabold mb-4"
+          style={{ color: primaryText, lineHeight: 1.1 }}
         >
-          Get in Touch
+          Get in Touch <span style={{ color: accent }}>/ تواصل معنا</span>
         </h1>
         <p
-          className={`text-lg md:text-xl max-w-3xl mx-auto ${mutedText}`}
-          style={{ lineHeight: "1.6" }}
+          className="text-lg max-w-3xl mx-auto leading-relaxed"
+          style={{ color: mutedText }}
         >
-          AZLAAN CONTRACTING W.L.L specializes in premium flooring, curtain
-          solutions, kiosk & exhibition stand services across Qatar. Reach out
-          for project consultations or service inquiries.
+          AZLAAN CONTRACTING W.L.L offers premium flooring, curtains, kiosks, and exhibition stands across Qatar. <br />
+          Reach out to discuss your project or for inquiries.
+        </p>
+        <p
+          className="text-lg max-w-3xl mx-auto leading-relaxed mt-2"
+          style={{ color: mutedText }}
+          dir="rtl"
+        >
+          شركة أزلان للمقاولات المحدودة تقدم حلول أرضيات، ستائر، أكشاك وأجنحة معارض فاخرة في قطر. <br />
+          تواصل معنا لمناقشة مشروعك أو للاستفسارات.
         </p>
       </motion.div>
 
-      <section className="grid md:grid-cols-2 gap-10">
-        {/* Contact Info */}
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12">
+        {/* Left Card: Contact Info */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className={`${bgSecondary} p-8 rounded-2xl shadow-lg`}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="bg-white rounded-3xl p-12 shadow-lg flex flex-col justify-between"
+          style={{ boxShadow: shadow }}
         >
-          <h2
-            className="text-2xl font-semibold mb-6"
-            style={{ color: primaryColor }}
-          >
-            Contact Information
-          </h2>
-          <div className={`space-y-4 ${mutedText} text-base leading-relaxed`}>
-            <p>
-              <strong>Address:</strong> Zone 26, Street 850, Building 30, Al
-              Mansoura, Doha, Qatar
-            </p>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a
-                href="mailto:qatarwintrading@gmail.com"
-                className="underline"
-                style={{ color: primaryColor }}
-              >
-                qatarwintrading@gmail.com
-              </a>
-            </p>
-            <p>
-              <strong>Phone:</strong>{" "}
-              <a
-                href="tel:+97455760872"
-                className="underline"
-                style={{ color: primaryColor }}
-              >
-                +974 5576 0872
-              </a>
-            </p>
-            <p>
-              <strong>Hours:</strong>
-              <br />
-              Sat-Thu: 8:00 AM – 1:00 PM, 3:30 PM – 10:00 PM
-              <br />
-              Fri: 3:30 PM – 10:00 PM
-            </p>
-            <p>
-              <strong>We’re here to discuss your next project!</strong>
-            </p>
+          <div>
+            <h2 className="text-3xl font-semibold mb-10" style={{ color: primaryText }}>
+              Contact Information / معلومات التواصل
+            </h2>
+
+            <ul className="space-y-6 text-base" style={{ color: mutedText }}>
+              <li>
+                <strong>Address / العنوان:</strong>{" "}
+                <span dir="ltr">Zone 26, Street 850, Building 30, Al Mansoura, Doha, Qatar</span>
+              </li>
+              <li>
+                <strong>Email / البريد الإلكتروني:</strong>{" "}
+                <a href="mailto:qatarwintrading@gmail.com" style={{ color: accent, textDecoration: "underline" }}>
+                  qatarwintrading@gmail.com
+                </a>
+              </li>
+              <li>
+                <strong>Phone / الهاتف:</strong>{" "}
+                <a href="tel:+97455760872" style={{ color: accent, textDecoration: "underline" }}>
+                  +974 5576 0872
+                </a>
+              </li>
+              <li>
+                <strong>Working Hours / ساعات العمل:</strong>
+                <br />
+                Sat-Thu: 8:00 AM – 1:00 PM, 3:30 PM – 10:00 PM
+                <br />
+                Fri: 3:30 PM – 10:00 PM
+              </li>
+            </ul>
           </div>
-          <div className="flex gap-6 text-3xl mt-8" style={{ color: primaryColor }}>
-            <a
-              href="tel:+97455760872"
-              className="hover:text-purple-600 transition-colors duration-300"
-              aria-label="Call us"
-            >
-              <FaPhoneAlt />
-            </a>
-            <a
-              href="https://wa.me/+97455760872"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-purple-600 transition-colors duration-300"
-              aria-label="Chat on WhatsApp"
-            >
-              <FaWhatsapp />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61573137238181"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-purple-600 transition-colors duration-300"
-              aria-label="Facebook profile"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="https://www.instagram.com/rokibwin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-purple-600 transition-colors duration-300"
-              aria-label="Instagram profile"
-            >
-              <FaInstagram />
-            </a>
+
+          <p
+            className="mt-10 font-semibold text-orange-500 text-center text-lg"
+            dir="rtl"
+            style={{ color: accent }}
+          >
+            نحن هنا لمناقشة مشروعك القادم!
+          </p>
+
+          <div className="flex justify-center space-x-8 mt-12">
+            {[
+              {
+                href: "tel:+97455760872",
+                label: "Call / اتصل",
+                icon: <FaPhoneAlt />,
+              },
+              {
+                href: "https://wa.me/+97455760872",
+                label: "WhatsApp / واتساب",
+                icon: <FaWhatsapp />,
+                external: true,
+              },
+              {
+                href: "https://www.facebook.com/profile.php?id=61573137238181",
+                label: "Facebook / فيسبوك",
+                icon: <FaFacebook />,
+                external: true,
+              },
+              {
+                href: "https://www.instagram.com/rokibwin",
+                label: "Instagram / انستغرام",
+                icon: <FaInstagram />,
+                external: true,
+              },
+            ].map(({ href, label, icon, external }) => (
+              <a
+                key={label}
+                href={href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                aria-label={label}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 48,
+                  height: 48,
+                  borderRadius: "50%",
+                  backgroundColor: "#FDEBD0",
+                  color: accent,
+                  boxShadow: `0 0 8px ${accent}50`,
+                  transition: "all 0.3s ease",
+                  textDecoration: "none",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = accent;
+                  e.currentTarget.style.color = "#fff";
+                  e.currentTarget.style.boxShadow = `0 0 15px ${accent}`;
+                  e.currentTarget.style.transform = "scale(1.1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#FDEBD0";
+                  e.currentTarget.style.color = accent;
+                  e.currentTarget.style.boxShadow = `0 0 8px ${accent}50`;
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              >
+                {icon}
+              </a>
+            ))}
           </div>
         </motion.div>
 
-        {/* Contact Form */}
+        {/* Right Card: Contact Form */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className={`${bgPrimary} p-8 rounded-2xl shadow-lg`}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="bg-white rounded-3xl p-12 shadow-lg"
+          style={{ boxShadow: shadow }}
         >
-          <h2
-            className="text-2xl font-semibold mb-4"
-            style={{ color: primaryColor }}
-          >
-            Send Us a Message
+          <h2 className="text-3xl font-semibold mb-8" style={{ color: primaryText }}>
+            Send Us a Message / أرسل لنا رسالة
           </h2>
-          <p className={`${mutedText} mb-6 text-base`}>
-            We value your message. Fill out the form and our team will contact
-            you shortly.
+          <p className="mb-8 text-base" style={{ color: mutedText }}>
+            Fill out the form below and our team will get back to you shortly.
+            <br />
+            يرجى ملء النموذج أدناه وسيتواصل فريقنا معك قريبًا.
           </p>
-          <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-            <div>
+
+          <form onSubmit={handleSubmit} noValidate style={{ fontFamily }}>
+            {/* Name */}
+            <div style={{ marginBottom: 24 }}>
               <label
                 htmlFor="name"
-                className={`block text-sm font-medium mb-1 ${mutedText}`}
+                style={{
+                  display: "block",
+                  marginBottom: 8,
+                  fontWeight: "600",
+                  color: mutedText,
+                  fontSize: 14,
+                }}
               >
-                Name
+                Name / الاسم
               </label>
               <input
                 type="text"
-                name="name"
                 id="name"
+                name="name"
+                required
                 value={formData.name}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-xl focus:outline-none focus:ring-2`}
+                placeholder="Your full name / اسمك الكامل"
                 style={{
-                  borderColor: activeTheme === "dark" ? "#4B5563" : "#D1D5DB",
-                  backgroundColor: activeTheme === "dark" ? "#1F2937" : "#FFFFFF",
-                  color: activeTheme === "dark" ? "#F9FAFB" : "#111827",
-                  transition: "border-color 0.3s ease",
+                  width: "100%",
+                  borderRadius: 12,
+                  border: `1.5px solid ${inputBorder}`,
+                  backgroundColor: inputBg,
+                  padding: "12px 16px",
+                  fontSize: 16,
+                  color: primaryText,
+                  outlineColor: accent,
+                  transition: "border-color 0.3s, box-shadow 0.3s",
                 }}
-                required
-                aria-required="true"
-                aria-describedby="nameHelp"
+                onFocus={(e) => {
+                  e.target.style.borderColor = accent;
+                  e.target.style.boxShadow = `0 0 6px ${accent}`;
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = inputBorder;
+                  e.target.style.boxShadow = "none";
+                }}
               />
             </div>
-            <div>
+
+            {/* Email */}
+            <div style={{ marginBottom: 24 }}>
               <label
                 htmlFor="email"
-                className={`block text-sm font-medium mb-1 ${mutedText}`}
+                style={{
+                  display: "block",
+                  marginBottom: 8,
+                  fontWeight: "600",
+                  color: mutedText,
+                  fontSize: 14,
+                }}
               >
-                Email
+                Email / البريد الإلكتروني
               </label>
               <input
                 type="email"
-                name="email"
                 id="email"
+                name="email"
+                required
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-xl focus:outline-none focus:ring-2`}
+                placeholder="you@example.com"
                 style={{
-                  borderColor: activeTheme === "dark" ? "#4B5563" : "#D1D5DB",
-                  backgroundColor: activeTheme === "dark" ? "#1F2937" : "#FFFFFF",
-                  color: activeTheme === "dark" ? "#F9FAFB" : "#111827",
-                  transition: "border-color 0.3s ease",
+                  width: "100%",
+                  borderRadius: 12,
+                  border: `1.5px solid ${inputBorder}`,
+                  backgroundColor: inputBg,
+                  padding: "12px 16px",
+                  fontSize: 16,
+                  color: primaryText,
+                  outlineColor: accent,
+                  transition: "border-color 0.3s, box-shadow 0.3s",
                 }}
-                required
-                aria-required="true"
-                aria-describedby="emailHelp"
+                onFocus={(e) => {
+                  e.target.style.borderColor = accent;
+                  e.target.style.boxShadow = `0 0 6px ${accent}`;
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = inputBorder;
+                  e.target.style.boxShadow = "none";
+                }}
               />
             </div>
-            <div>
+
+            {/* Message */}
+            <div style={{ marginBottom: 32 }}>
               <label
                 htmlFor="message"
-                className={`block text-sm font-medium mb-1 ${mutedText}`}
+                style={{
+                  display: "block",
+                  marginBottom: 8,
+                  fontWeight: "600",
+                  color: mutedText,
+                  fontSize: 14,
+                }}
               >
-                Message
+                Message / الرسالة
               </label>
               <textarea
-                name="message"
                 id="message"
+                name="message"
+                rows="5"
+                required
                 value={formData.message}
                 onChange={handleChange}
-                rows="5"
-                className={`w-full p-3 border rounded-xl focus:outline-none focus:ring-2 resize-none`}
+                placeholder="Write your message here... / اكتب رسالتك هنا..."
                 style={{
-                  borderColor: activeTheme === "dark" ? "#4B5563" : "#D1D5DB",
-                  backgroundColor: activeTheme === "dark" ? "#1F2937" : "#FFFFFF",
-                  color: activeTheme === "dark" ? "#F9FAFB" : "#111827",
-                  transition: "border-color 0.3s ease",
+                  width: "100%",
+                  borderRadius: 12,
+                  border: `1.5px solid ${inputBorder}`,
+                  backgroundColor: inputBg,
+                  padding: "12px 16px",
+                  fontSize: 16,
+                  color: primaryText,
+                  resize: "none",
+                  outlineColor: accent,
+                  transition: "border-color 0.3s, box-shadow 0.3s",
                 }}
-                required
-                aria-required="true"
-                aria-describedby="messageHelp"
-              ></textarea>
+                onFocus={(e) => {
+                  e.target.style.borderColor = accent;
+                  e.target.style.boxShadow = `0 0 6px ${accent}`;
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = inputBorder;
+                  e.target.style.boxShadow = "none";
+                }}
+              />
             </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 rounded-xl font-semibold transition-colors duration-300"
               style={{
-                backgroundColor: primaryColor,
+                width: "100%",
+                padding: "14px 0",
+                borderRadius: 12,
+                backgroundColor: accent,
                 color: "#fff",
+                fontSize: 18,
+                fontWeight: "700",
+                cursor: "pointer",
+                transition: "background-color 0.3s, transform 0.2s",
+                border: "none",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = accentColor)}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = primaryColor)}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#d76a1e";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = accent;
+                e.currentTarget.style.transform = "none";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = "scale(0.95)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+              }}
             >
-              Send Message
+              Send Message / إرسال
             </button>
+
+            {/* Status message */}
             {status && (
               <p
-                className={`text-center mt-4 ${
-                  status.includes("success") ? "text-green-600" : "text-red-600"
-                } font-medium`}
-                role="alert"
+                className="mt-6 text-center font-semibold"
+                style={{
+                  color: status.includes("نجاح") ? "#27AE60" : "#C0392B",
+                  fontSize: 16,
+                }}
+                dir={status.includes("نجاح") ? "rtl" : "ltr"}
               >
                 {status}
               </p>
             )}
           </form>
         </motion.div>
-      </section>
+      </div>
     </div>
   );
 };
