@@ -12,6 +12,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
+import PageTitle from "../reusable/PageTitle";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
@@ -26,6 +27,8 @@ const AboutUs = () => {
   const accentColor = "#FFD700";
 
   return (
+    <div>
+    <PageTitle title="About Us | AZLAAN CONTRACTING W.L.L | Interior & Event Solutions in Qatar"  />
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
@@ -135,6 +138,7 @@ const AboutUs = () => {
           <div className="mt-2 text-sm text-gray-500">CR No.: 170827</div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

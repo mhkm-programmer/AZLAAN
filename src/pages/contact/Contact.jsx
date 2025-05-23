@@ -11,6 +11,8 @@ import {
 } from 'react-icons/md';
 import React, { useState } from 'react';
 
+import PageTitle from '../reusable/PageTitle';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,6 +35,8 @@ const Contact = () => {
   };
 
   return (
+    <div>
+    <PageTitle title="Contact Us | AZLAAN CONTRACTING W.L.L | Interior & Event Solutions in Qatar"  />
     <section className="min-h-screen bg-gradient-to-br from-slate-50 to-white py-20 px-6 md:px-24 font-sans">
       {/* Section Heading */}
       <div className="max-w-3xl mx-auto text-center mb-20">
@@ -163,6 +167,7 @@ const Contact = () => {
         </form>
       </div>
     </section>
+    </div>
   );
 };
 
