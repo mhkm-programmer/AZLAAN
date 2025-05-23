@@ -61,7 +61,7 @@ const HeaderAlFWZ = () => {
       }, 200);
 
       matches.forEach((el) => {
-        el.style.backgroundColor = "gold";
+        el.style.backgroundColor = "#ffe58f";
         setTimeout(() => {
           el.style.backgroundColor = "";
         }, 2000);
@@ -84,63 +84,69 @@ const HeaderAlFWZ = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <div className="sticky top-0 z-50 bg-[#0c1c2c]">
+    <div className="sticky top-0 z-50 bg-[#101e2e] font-sans shadow-xl">
       {/* Top Banner */}
-      <div className="bg-[#1a2a3c] py-2">
-        <h1 className="text-sm md:text-lg text-center font-medium text-[#FFD700]">
+      <div className="bg-[#162534] py-2">
+        <h1 className="text-sm md:text-lg text-center font-semibold text-[#FEC600] tracking-wide">
           <Typed
             strings={[
               "Welcome to AZLAAN CONTRACTING W.L.L",
-              "Specialists in Flooring, Curtains, Kiosks & Exhibition Stands",
-              "Professional Design & Installation Services Across Qatar",
+              "Experts in Event Management & Interior Solutions in Qatar",
+              "Office & Home Designs | Kiosks | Flooring | Curtains | Exhibition Stands",
             ]}
-            typeSpeed={60}
-            backSpeed={40}
+            typeSpeed={50}
+            backSpeed={30}
             loop
           />
         </h1>
       </div>
 
       {/* Main Header */}
-      <div className="bg-[#0c1c2c] text-white shadow-md">
-        <div className="container flex justify-between items-center px-4 py-3 mx-auto">
+      <div className="bg-[#101e2e] text-white">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center">
+          <NavLink to="/" className="flex items-center space-x-2">
             <img
-              src="https://8upload.com/image/67979661192f3/AL-FWZ_Tradign_Contracting_Logo.png" // Replace with AZLAAN logo
+              src="https://8upload.com/image/67979661192f3/AL-FWZ_Tradign_Contracting_Logo.png"
               alt="AZLAAN Logo"
               className="h-10 w-auto"
             />
           </NavLink>
 
           {/* Search Bar */}
-          <div className="flex-grow flex justify-center mx-4">
-            <div className="relative w-full max-w-md">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyDown={handleKeyDown}
-                placeholder="Search flooring, curtains, kiosks..."
-                className="w-full px-4 py-2 bg-white text-sm text-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              />
+          <div className="flex-grow flex justify-center mx-4 relative">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Search services, products..."
+              className="w-full max-w-md px-4 py-2 rounded-full bg-white text-black text-sm shadow-md focus:outline-none focus:ring-2 focus:ring-[#FEC600]"
+            />
+            {searchQuery && (
               <button
-                onClick={handleSearch}
-                className="absolute inset-y-0 right-0 flex items-center px-3 bg-[#FFD700] rounded-r-md"
+                onClick={() => setSearchQuery("")}
+                className="absolute right-10 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-red-500"
               >
-                <img
-                  src="https://8upload.com/image/6797eb0d03c90/glass.png"
-                  alt="Search"
-                  className="h-5 w-5"
-                />
+                ✕
               </button>
-            </div>
+            )}
+            <button
+              onClick={handleSearch}
+              className="absolute right-0 top-0 bottom-0 px-4 bg-[#FEC600] rounded-r-full hover:bg-yellow-400 transition"
+            >
+              <img
+                src="https://8upload.com/image/6797eb0d03c90/glass.png"
+                alt="Search"
+                className="h-4 w-4"
+              />
+            </button>
           </div>
 
-          {/* Mobile Toggle */}
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="flex items-center justify-center w-10 h-10 rounded-md bg-[#FFD700]"
+            className="block md:hidden px-3 py-2 bg-[#FEC600] rounded-md focus:outline-none"
           >
             <img
               src={
@@ -152,12 +158,29 @@ const HeaderAlFWZ = () => {
               className="h-5 w-5"
             />
           </button>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex space-x-6">
+            {leftMenuItems.map((item, index) => (
+              <NavLink
+                key={index}
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#FEC600] font-medium"
+                    : "hover:text-[#FEC600] transition"
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="bg-[#0c1c2c] text-white">
-            <ul className="space-y-2 px-4 py-2">
+          <nav className="md:hidden px-4 pb-4">
+            <ul className="space-y-2">
               {leftMenuItems.map((item, index) => (
                 <li key={index}>
                   <NavLink
@@ -165,8 +188,8 @@ const HeaderAlFWZ = () => {
                     onClick={toggleMobileMenu}
                     className={({ isActive }) =>
                       isActive
-                        ? "block px-4 py-2 hover:bg-[#1a2a3c] rounded-md text-[#FFD700]"
-                        : "block px-4 py-2 hover:bg-[#1a2a3c] rounded-md"
+                        ? "block px-4 py-2 rounded-md bg-[#1a2a3c] text-[#FEC600]"
+                        : "block px-4 py-2 rounded-md hover:bg-[#1a2a3c] transition"
                     }
                   >
                     {item.label}
@@ -181,20 +204,18 @@ const HeaderAlFWZ = () => {
         {searchResults.length > 0 && (
           <div className="bg-gray-100 text-black p-4">
             <h2 className="font-bold text-lg mb-2">Search Results:</h2>
-            <ul>
+            <ul className="space-y-1">
               {searchResults.map((result, index) => (
-                <li key={index} className="mb-1">
+                <li key={index}>
                   <a
                     href={`#${result.elementId}`}
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline hover:text-blue-700"
                     onClick={(e) => {
                       e.preventDefault();
-                      document
-                        .getElementById(result.elementId)
-                        ?.scrollIntoView({
-                          behavior: "smooth",
-                          block: "center",
-                        });
+                      document.getElementById(result.elementId)?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      });
                     }}
                   >
                     {result.text}
@@ -204,7 +225,7 @@ const HeaderAlFWZ = () => {
             </ul>
             <button
               onClick={closeSearchResults}
-              className="mt-4 text-red-500 underline"
+              className="mt-4 text-red-600 underline hover:text-red-800"
             >
               Close Results
             </button>

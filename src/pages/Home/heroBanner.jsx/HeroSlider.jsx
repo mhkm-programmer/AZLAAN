@@ -7,7 +7,6 @@ import useThemeSwitcher from "../../../hooks/useThemeSwitcher";
 const HeroSlider = () => {
   const [activeTheme] = useThemeSwitcher();
   const [showOptions, setShowOptions] = useState(false);
-
   const handleShowOptions = () => setShowOptions(true);
 
   const sliderSettings = {
@@ -28,39 +27,51 @@ const HeroSlider = () => {
     "https://8upload.com/image/679ab8ae708ea/IMG-20250112-WA0458.jpg",
   ];
 
+  const colors = {
+    primaryText: "#2E2E2E",
+    accent: "#8C6239",
+    backgroundLight: "#F9F6F1",
+    buttonBase: "#4A342E",
+    buttonHover: "#5A4035",
+  };
+
   return (
     <div
-      className={`mx-auto items-center justify-between overflow-hidden pt-8 pb-12 md:flex md:px-12 ${
-        activeTheme === "dark" ? "text-white bg-neutral-900" : "text-neutral-900 bg-gray-50"
+      className={`mx-auto overflow-hidden py-12 px-5 md:px-12 lg:flex items-center justify-between gap-12 ${
+        activeTheme === "dark"
+          ? "bg-neutral-900 text-white"
+          : "bg-[#F9F6F1] text-[#2E2E2E]"
       }`}
+      style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Left Content */}
-      <div className="flex-1 max-w-xl space-y-6 px-5 md:px-0">
-        <div className="space-y-4 text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#3A2F27] dark:text-white">
-            Elevate Every Interior with AZLAAN CONTRACTING W.L.L
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            We specialize in high-quality <strong>flooring solutions</strong>, stylish <strong>curtain installations</strong>, and custom <strong>kiosk & exhibition stand</strong> setups. AZLAAN delivers innovation, elegance, and durability — all tailored to your space.
-          </p>
-        </div>
+      <div className="flex-1 max-w-xl space-y-6 text-center lg:text-left">
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight" style={{ color: colors.primaryText }}>
+          Transforming Spaces, Creating Experiences
+        </h1>
+        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          <strong>AZLAAN CONTRACTING W.L.L</strong> brings your vision to life through
+          <strong> event planning</strong> and
+          <strong> luxury interior design</strong> solutions for both
+          <strong> offices</strong> and <strong>homes</strong>. We craft elegance and functionality in every project.
+        </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center md:items-start space-y-4">
+        <div className="mt-6">
           {!showOptions ? (
             <button
               onClick={handleShowOptions}
-              className="bg-[#3A2F27] hover:bg-[#574134] text-white font-medium px-6 py-3 rounded-xl shadow-md transition duration-300"
+              className="bg-[#4A342E] hover:bg-[#5A4035] text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all duration-300"
             >
-              Request Quote or Book Consultation
+              Get a Free Consultation
             </button>
           ) : (
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="https://www.google.com/maps?q=Azlaan+Contracting+Qatar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#3A2F27] hover:bg-[#574134] text-white font-medium px-5 py-3 rounded-lg transition duration-300"
+                className="flex items-center gap-2 bg-[#4A342E] hover:bg-[#5A4035] text-white px-5 py-3 rounded-lg font-medium transition duration-300"
               >
                 <FaMapMarkerAlt /> Visit Our Office
               </a>
@@ -68,7 +79,7 @@ const HeroSlider = () => {
                 href="https://wa.me/+97455760872"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-medium px-5 py-3 rounded-lg transition duration-300"
+                className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white px-5 py-3 rounded-lg font-medium transition duration-300"
               >
                 <FaWhatsapp /> Chat on WhatsApp
               </a>
@@ -77,15 +88,15 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Right Carousel */}
-      <div className="flex-1 mt-10 md:mt-0 md:ml-10 max-w-xl w-full">
+      {/* Right Image Slider */}
+      <div className="flex-1 mt-10 lg:mt-0 max-w-xl w-full">
         <Slider {...sliderSettings}>
           {images.map((src, index) => (
             <div key={index} className="flex justify-center items-center">
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="rounded-2xl shadow-xl w-full h-[400px] md:h-[500px] object-cover"
+                className="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               />
             </div>
           ))}
