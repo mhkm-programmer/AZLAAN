@@ -10,7 +10,7 @@ const HeaderAlFWZ = () => {
   const leftMenuItems = [
     { label: "HOME", to: "/" },
     { label: "ABOUT US", to: "/about" },
-    { label: "SERVICES", to: "/services" },
+    { label: "SERVICES", to: "/service" },
     { label: "CONTACT", to: "/contact" },
   ];
 
