@@ -14,13 +14,15 @@ const [Services, setServices] = useState([
   description:
     "AZLAAN CONTRACTING W.L.L delivers creative and fully customized exhibition stands that captivate attention and enhance brand presence at trade shows and expos.",
   image: [
-    "https://example.com/images/exhibition-stand-main.jpg"
+    "https://8upload.com/image/6835d5dfe8653/IMG-20250518-WA0028.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/exhibition-stand1.jpg",
-    "https://example.com/images/exhibition-stand2.jpg",
-    "https://example.com/images/exhibition-stand3.jpg",
-    "https://example.com/images/exhibition-stand4.jpg"
+    "https://8upload.com/image/6835d417e23af/IMG-20250518-WA0011-min-compressed.jpg",
+    "https://8upload.com/image/6835d409c9074/IMG-20250518-WA0006-min-compressed.jpg",
+    "https://8upload.com/image/6835d5e0228b3/IMG-20250518-WA0043.jpg",
+     "https://8upload.com/image/6835d5df9735b/IMG-20250518-WA0027.jpg",
+    "https://8upload.com/image/6835d40f62194/IMG-20250518-WA0008-min-compressed.jpg",
+    "https://8upload.com/image/6835d41235075/IMG-20250518-WA0010-min-compressed.jpg"
   ],
   keyFeatures: [
     "Custom-built to brand specifications",
@@ -47,13 +49,15 @@ const [Services, setServices] = useState([
   description:
     "We provide end-to-end event planning services, from concept to execution, ensuring flawless experiences for all types of corporate and private gatherings.",
   image: [
-    "https://example.com/images/event-management-main.jpg"
+    "https://8upload.com/image/6835d83e5eeb5/IMG-20250518-WA0044.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/event1.jpg",
-    "https://example.com/images/event2.jpg",
-    "https://example.com/images/event3.jpg",
-    "https://example.com/images/event4.jpg"
+    "https://8upload.com/image/6835d83e97fac/IMG-20250524-WA0010.jpg",
+    "https://8upload.com/image/6835d83d41e93/IMG-20250518-WA0034.jpg",
+    "https://8upload.com/image/6835d83e212f2/IMG-20250518-WA0043.jpg",
+    "https://8upload.com/image/6835d83dcdb2b/IMG-20250518-WA0042.jpg",
+    "https://8upload.com/image/6835d83d0d358/IMG-20250518-WA0029.jpg",
+    "https://8upload.com/image/6835d83cc4f6f/IMG-20250518-WA0021.jpg"
   ],
   keyFeatures: [
     "Customized themes and setups",
@@ -152,13 +156,15 @@ const [Services, setServices] = useState([
   description:
     "AZLAAN provides premium-quality, custom-built furniture for homes, offices, and event setups, blending comfort, design, and functionality.",
   image: [
-    "https://example.com/images/furniture-main.jpg"
+    "https://8upload.com/image/6835db5b82ac4/IMG-20250113-WA0008.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/furniture1.jpg",
-    "https://example.com/images/furniture2.jpg",
-    "https://example.com/images/furniture3.jpg",
-    "https://example.com/images/furniture4.jpg"
+    "https://8upload.com/image/6835db5ba0248/IMG-20250112-WA0883.jpg",
+    "https://8upload.com/image/6835db5bc8df3/IMG-20250112-WA0387.jpg",
+    "https://8upload.com/image/6835db5c664f0/IMG-20250112-WA0087.jpg",
+      "https://8upload.com/image/6835db5c22fd7/IMG-20250112-WA0176.jpg",
+    "https://8upload.com/image/6835db5bebc96/IMG-20250112-WA0291.jpg",
+    "https://8upload.com/image/6835db5c4392f/IMG-20250112-WA0090.jpg"
   ],
   keyFeatures: [
     "Modern and ergonomic designs",
