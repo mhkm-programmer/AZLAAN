@@ -21,10 +21,7 @@ const CustomerReviews = () => {
     },
     {
       image: "https://8upload.com/image/67a01a1c849be/Mohammed_Khalifa.jpg",
-      quoteEn: "Reliable, efficient, and high-quality craftsmanship. Highly recommend LuxeFurnish.",
-      quoteAr: "موثوق، فعال، وجودة عالية في التنفيذ. أنصح بالتعامل مع لوكس فرنيش بشدة.",
-      name: "Mohammed Khalifa",
-      title: "CEO, Khalifa Enterprises",
+     
     },
     {
       image: "https://8upload.com/image/67a01a1c6130d/Sara_Ibrahim.jpg",
