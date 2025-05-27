@@ -81,13 +81,15 @@ const [Services, setServices] = useState([
   description:
     "AZLAAN CONTRACTING W.L.L offers stunning and personalized wedding decoration services, creating unforgettable atmospheres with elegance and creativity.",
   image: [
-    "https://example.com/images/wedding-main.jpg"
+    "https://8upload.com/image/68358ff2790ed/qatariweddings__1682460102_3089021684216554656.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/wedding1.jpg",
-    "https://example.com/images/wedding2.jpg",
-    "https://example.com/images/wedding3.jpg",
-    "https://example.com/images/wedding4.jpg"
+    "https://8upload.com/image/68358ff1a64ac/IMG-20250518-WA0037.jpg",
+    "https://8upload.com/image/68358ff20edcb/qatariweddings__1678644605_3057014971319711486.jpg",
+    "https://8upload.com/image/68358ff25d1d5/qatariweddings__1678644605_3057014971546123337.jpg",
+    "https://8upload.com/image/68358ff243a75/qatariweddings__1678644605_3057014971520998657.jpg",
+    "https://8upload.com/image/68358ff1988af/7d43cf9d9a7aab21cc46b2a9bce3abce.jpg",
+    "https://8upload.com/image/68358ff22a9bd/qatariweddings__1678644605_3057014971336330602.jpg"
   ],
   keyFeatures: [
     "Custom wedding stage and aisle design",
@@ -114,13 +116,15 @@ const [Services, setServices] = useState([
   description:
     "We provide turnkey conference setup services including stage design, seating, lighting, sound, and branding — ideal for corporate and business events.",
   image: [
-    "https://example.com/images/conference-main.jpg"
+    "https://8upload.com/image/6835876c50cbf/IMG-20250518-WA0019.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/conference1.jpg",
-    "https://example.com/images/conference2.jpg",
-    "https://example.com/images/conference3.jpg",
-    "https://example.com/images/conference4.jpg"
+    "https://8upload.com/image/6835876c719dc/IMG-20250518-WA0020.jpg",
+    "https://8upload.com/image/68358a5042e4a/IMG-20250518-WA0041.jpg",
+    "https://8upload.com/image/68358a5008341/IMG-20250518-WA0038.jpg",
+    "https://8upload.com/image/68358a4fb8388/IMG-20250518-WA0037.jpg",
+    "https://8upload.com/image/68358a4f31468/IMG-20250518-WA0025.jpg",
+    "https://8upload.com/image/68358afb0a71f/IMG-20250524-WA0010.jpg"
   ],
   keyFeatures: [
     "Complete audio-visual setup",
@@ -183,13 +187,15 @@ const [Services, setServices] = useState([
   description:
     "AZLAAN CONTRACTING W.L.L provides premium curtain fabrics and expert installation services for residential and commercial spaces.",
   image: [
-    "https://example.com/images/curtains-main.jpg"
+    "https://8upload.com/image/683573291f1ad/IMG-20250524-WA0025.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/curtains1.jpg",
-    "https://example.com/images/curtains2.jpg",
-    "https://example.com/images/curtains3.jpg",
-    "https://example.com/images/curtains4.jpg"
+    "https://8upload.com/image/683573295785c/IMG-20250524-WA0026.jpg",
+    "https://8upload.com/image/68357328da86a/IMG-20250524-WA0024.jpg",
+    "https://8upload.com/image/683579d08bc61/IMG-20250112-WA0326.jpg",
+    "https://8upload.com/image/683579d0b9dcd/IMG-20250112-WA0337.jpg",
+     "https://8upload.com/image/6835732839614/IMG-20250524-WA0021.jpg",
+    "https://8upload.com/image/683573281acb3/IMG-20250524-WA0017.jpg"
   ],
   keyFeatures: [
     "Wide variety of fabrics and patterns",
@@ -217,13 +223,15 @@ const [Services, setServices] = useState([
   description:
     "We supply and install high-quality carpets tailored to enhance the comfort and aesthetics of your interior spaces.",
   image: [
-    "https://example.com/images/carpet-main.jpg"
+    "https://8upload.com/image/6835830a01f20/IMG-20250518-WA0046.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/carpet1.jpg",
-    "https://example.com/images/carpet2.jpg",
-    "https://example.com/images/carpet3.jpg",
-    "https://example.com/images/carpet4.jpg"
+    "https://8upload.com/image/6835830a3b578/IMG-20250518-WA0047.jpg",
+    "https://8upload.com/image/68358488d33b5/IMG-20250518-WA0004.jpg",
+    "https://8upload.com/image/683583093e1e5/IMG-20250518-WA0034.jpg",
+     "https://8upload.com/image/6835830901a3b/IMG-20250518-WA0031.jpg",
+    "https://8upload.com/image/68358308af632/IMG-20250518-WA0027.jpg",
+    "https://8upload.com/image/6835830855894/IMG-20250518-WA0005.jpg"
   ],
   keyFeatures: [
     "Residential and commercial solutions",
@@ -250,13 +258,15 @@ const [Services, setServices] = useState([
   description:
     "AZLAAN CONTRACTING W.L.L offers elegant parquet flooring that blends durability, style, and natural beauty for luxury interiors.",
   image: [
-    "https://example.com/images/parquet-main.jpg"
+    "https://8upload.com/image/683586063a259/IMG-20250518-WA0032.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/parquet1.jpg",
-    "https://example.com/images/parquet2.jpg",
-    "https://example.com/images/parquet3.jpg",
-    "https://example.com/images/parquet4.jpg"
+    "https://8upload.com/image/683584fa3fcc4/WhatsApp_Image_2025-05-24_at_19.54.58_2d06d044.jpg",
+    "https://8upload.com/image/683586065c70f/IMG-20250518-WA0033.jpg",
+    "https://8upload.com/image/6835860699589/IMG-20250518-WA0034.jpg",
+    "https://8upload.com/image/68358606df569/IMG-20250518-WA0035.jpg",
+    "https://8upload.com/image/683586afbc756/SPC5__1_-min.jpg",
+    "https://8upload.com/image/683584fa786d5/WhatsApp_Image_2025-05-24_at_19.54.59_cbc3e988.jpg"
   ],
   keyFeatures: [
     "Premium hardwood and laminate options",
@@ -283,13 +293,19 @@ const [Services, setServices] = useState([
   description:
     "We provide hygienic, anti-bacterial vinyl flooring solutions ideal for hospitals, clinics, and healthcare facilities.",
   image: [
-    "https://example.com/images/vinyl-main.jpg"
+    "https://8upload.com/image/68357f0719d72/Polyflor_Vinyl_Flooring_For_The_Health_and_Care_Sectors_1.jpg"
   ],
   galleryImage: [
-    "https://example.com/images/vinyl1.jpg",
-    "https://example.com/images/vinyl2.jpg",
-    "https://example.com/images/vinyl3.jpg",
-    "https://example.com/images/vinyl4.jpg"
+    "https://8upload.com/image/68357f07970ea/clinics-vinyl-flooring-s1__1_.jpg",
+    "https://8upload.com/image/68357f07824a2/clinics-vinyl-flooring-s2.jpg",
+    
+   
+    
+    "https://8upload.com/image/68357f06da18c/Polyflor_Vinyl_Flooring_For_The_Health_and_Care_Sectors_11__1_.jpg",
+     "https://8upload.com/image/68357f076ded8/hospital-flooring-s2-qz642y3prqarlwu0xbk1zfq2pzqc8ltw9y35e7t93s.jpg",
+    "https://8upload.com/image/68357f075abf7/Hospital-vinyl-flooring-s1-e1727084667601-quixuxlqewisallwj741hntv7756kr8dsdimo1abv0.jpg",
+    "https://8upload.com/image/68357f0732529/Polyflor_Vinyl_Flooring_for_Health_and_Care_Industry_4.jpg"
+    
   ],
   keyFeatures: [
     "Seamless and easy to clean",

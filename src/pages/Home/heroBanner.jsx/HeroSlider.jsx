@@ -1,34 +1,58 @@
 import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Slider from "react-slick";
 import useThemeSwitcher from "../../../hooks/useThemeSwitcher";
 
 const HeroSlider = () => {
-  const [, setTheme] = useThemeSwitcher(); // Ignore theme here as we fix background
+  const [, setTheme] = useThemeSwitcher();
   const [showOptions, setShowOptions] = useState(false);
+
   const handleShowOptions = () => setShowOptions(true);
 
   const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-    adaptiveHeight: true,
-  };
-
-  const images = [
-    "https://8upload.com/image/679ab81322a48/IMG-20250113-WA0033.jpg",
-    "https://8upload.com/image/679abe281ed2b/office-furniture__1_.jpg",
-    "https://8upload.com/image/679ab8ae708ea/IMG-20250112-WA0458.jpg",
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+  adaptiveHeight: true,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  pauseOnDotsHover: false,
+};
+  const slides = [
+    {
+      type: "image",
+      src: "https://8upload.com/image/68337d45aa60e/IMG-20250518-WA0039.jpg",
+    },
+    {
+      type: "video",
+      videoType: "streamable",
+      src: "https://streamable.com/e/md5pe4",
+    },
+    {
+      type: "video",
+      videoType: "streamable",
+      src: "https://streamable.com/e/cxrr13",
+    },
+   
+    {
+      type: "video",
+      videoType: "streamable",
+      src: "https://streamable.com/e/a82dgf",
+    },
+    {
+      type: "image",
+      src: "https://8upload.com/image/68337cbb8461d/IMG-20250518-WA0006.jpg",
+    },
   ];
 
   const colors = {
-    background: "#F2EDE6", // Services section background
+    background: "#F2EDE6",
     primaryText: "#2E2E2E",
     accent: "#8C6239",
     buttonBase: "#4A342E",
@@ -52,8 +76,9 @@ const HeroSlider = () => {
         </h1>
         <p className="text-lg leading-relaxed" style={{ color: colors.subtitle }}>
           <strong>AZLAAN CONTRACTING W.L.L</strong> brings your vision to life through{" "}
-          <strong>event planning</strong> and <strong>luxury interior design</strong> solutions for both{" "}
-          <strong>offices</strong> and <strong>homes</strong>. We craft elegance and functionality in every project.
+          <strong>event planning</strong> and <strong>luxury interior design</strong> solutions
+          for both <strong>offices</strong> and <strong>homes</strong>. We craft elegance and
+          functionality in every project.
         </p>
 
         {/* Action Buttons */}
@@ -91,13 +116,41 @@ const HeroSlider = () => {
       {/* Right Slider */}
       <div className="flex-1 mt-12 lg:mt-0 max-w-xl w-full">
         <Slider {...sliderSettings}>
-          {images.map((src, index) => (
+          {slides.map((slide, index) => (
             <div key={index} className="flex justify-center items-center">
-              <img
-                src={src}
-                alt={`Slide ${index + 1}`}
-                className="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
-              />
+              {slide.type === "image" && (
+                <img
+                  src={slide.src}
+                  alt={`Slide ${index + 1}`}
+                  className="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
+                />
+              )}
+
+              {slide.type === "video" && slide.videoType === "streamable" && (
+                <div className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                  <iframe
+                    src={`${slide.src}?autoplay=1&muted=1`}
+                    allow="fullscreen; autoplay"
+                    allowFullScreen
+                    title={`Streamable Video ${index + 1}`}
+                    className="w-full h-full"
+                    style={{ border: "none" }}
+                  />
+                </div>
+              )}
+
+              {slide.type === "video" && slide.videoType === "youtube" && (
+                <div className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                  <iframe
+                    src={slide.src}
+                    title={`YouTube Video ${index + 1}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </Slider>

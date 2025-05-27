@@ -9,7 +9,7 @@ import WhyChoose from "./WhyChoose";
 const Home = () => {
   return (
     <div>
-   <PageTitle title="Home | AZLAAN CONTRACTING W.L.L | Interior & Event Solutions in Qatar" />
+   <PageTitle title="HOME | AZLAAN CONTRACTING W.L.L | Interior & Event Solutions in Qatar" />
 
       <HeroSlider />
       <RecentServiceCard />
