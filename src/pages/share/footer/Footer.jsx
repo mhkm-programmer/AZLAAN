@@ -17,9 +17,9 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-4">
               <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md">
                 <img
-                  src="https://8upload.com/image/67979661192f3/AL-FWZ_Tradign_Contracting_Logo.png"
+                  src="https://8upload.com/image/6830a9e51b351/Azlaan_Logo_Black.png"
                   alt="AZLAAN Logo"
-                  className="w-10 h-10 object-contain"
+                  className="w-10 h-10 object-contain rounded-full"
                 />
               </div>
               <div>

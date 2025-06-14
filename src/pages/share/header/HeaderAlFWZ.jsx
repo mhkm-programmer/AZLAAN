@@ -80,7 +80,7 @@ const HeaderAlFWZ = () => {
           <img
             src="https://8upload.com/image/6830a9e51b351/Azlaan_Logo_Black.png"
             alt="AZLAAN Logo"
-            className="h-10 w-auto"
+            className="h-10 w-auto rounded-full"
           />
         </NavLink>
 

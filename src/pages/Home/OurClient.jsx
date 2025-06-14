@@ -1,5 +1,4 @@
 import "react-alice-carousel/lib/alice-carousel.css";
-
 import AliceCarousel from "react-alice-carousel";
 import React from "react";
 
@@ -23,12 +22,12 @@ const OurClient = () => {
   ];
 
   const items = logos.map((logo, index) => (
-    <div key={index} className="flex justify-center items-center px-3">
-      <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 w-36 h-20 flex items-center justify-center">
+    <div key={index} className="px-3">
+      <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 w-32 h-20 mx-auto flex items-center justify-center">
         <img
           src={logo.src}
           alt={logo.alt}
-          className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
+          className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition duration-300"
         />
       </div>
     </div>
@@ -36,27 +35,32 @@ const OurClient = () => {
 
   return (
     <section className="py-20 bg-gradient-to-br from-[#f5f3ef] to-[#eee2d4] dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Section Title */}
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#6B4226] dark:text-white tracking-tight">
-            Our Esteemed Clients
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#4A342E] dark:text-white">
+            Our Clients
           </h2>
-          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            We are proud to be a trusted partner of leading companies in Qatar’s interior design, contracting, and exhibition sectors.
+          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            We are proud to be a trusted partner of leading companies in Qatar’s interior design,
+            contracting, and exhibition sectors.
           </p>
-          <p className="mt-3 text-sm text-[#6B4226] font-medium max-w-3xl mx-auto text-right rtl">
-            نفخر بكوننا الشريك الموثوق لأكبر الشركات الرائدة في مجالات التصميم الداخلي، المقاولات، وتنظيم المعارض في دولة قطر.
+          <p className="mt-2 text-sm text-[#6B4226] dark:text-amber-200 font-medium max-w-2xl mx-auto text-right rtl">
+            نفخر بكوننا الشريك الموثوق لأكبر الشركات الرائدة في مجالات التصميم الداخلي، المقاولات،
+            وتنظيم المعارض في دولة قطر.
           </p>
         </div>
 
+        {/* Carousel */}
         <div className="carousel-container">
           <AliceCarousel
             autoPlay
-            autoPlayInterval={2000}
             infinite
-            disableButtonsControls
-            disableDotsControls
             mouseTracking
+            disableDotsControls
+            disableButtonsControls
+            autoPlayInterval={1800}
+            animationDuration={1000}
             responsive={{
               0: { items: 2 },
               480: { items: 3 },

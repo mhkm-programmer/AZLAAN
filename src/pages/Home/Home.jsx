@@ -13,9 +13,7 @@ const Home = () => {
 
       <HeroSlider />
       <RecentServiceCard />
-      {/* <MyProjects />
-      <Blog /> */}
-      <WhyChoose/>
+            <WhyChoose/>
       <OurClient/>
       <CustomerReviews/>
      <SubscreibeContact/>
