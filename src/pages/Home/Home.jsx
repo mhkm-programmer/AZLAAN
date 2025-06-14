@@ -13,7 +13,7 @@ const Home = () => {
 
       <HeroSlider />
       <RecentServiceCard />
-            <WhyChoose/>
+      <WhyChoose/>
       <OurClient/>
       <CustomerReviews/>
      <SubscreibeContact/>

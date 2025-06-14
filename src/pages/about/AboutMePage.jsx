@@ -9,7 +9,7 @@ const AboutMePage = () => {
     <div>
      <PageTitle title="AL-FWZ Furniture Trading & Contracting | About Us" />
       <ParallaxSection
-        imagePath="https://8upload.com/image/67a7f51fa667f/About_Us-min.jpg"
+        imagePath="https://8upload.com/image/684dcf3e3f3e7/Company_Profile.jpg"
         title=""
         subTitle=""
       />

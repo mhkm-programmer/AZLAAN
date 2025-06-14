@@ -5,32 +5,48 @@ import RecentServiceCard from "./RecentServiceCard";
 
 const ServicePage = () => {
   return (
-    <div className="bg-slate-50 text-slate-800 font-sans">
+    <div className="bg-white text-gray-800 font-sans">
       {/* Dynamic Page Metadata */}
-      <PageTitle title="Azlaan Contracting W.L.L | Services" />
+      <PageTitle title="AZLAAN CONTRACTING W.L.L | Services" />
 
       {/* Hero Banner with Parallax */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/67a809e2eb5f0/Services.jpg"
-        title="Our Services"
-        subTitle="Crafted solutions in Flooring, Curtains, Kiosks, and Exhibition Booths"
+        imagePath="https://8upload.com/image/684dd189100df/Contact__1_.jpg"
+        title=""
+        subTitle=""
       />
 
-      {/* Section Heading */}
-      <section className="text-center py-16 px-6 md:px-20 bg-white">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-indigo-700 tracking-tight mb-4">
+      {/* Introduction Section */}
+      <section className="text-center py-20 px-6 md:px-24 bg-gray-50">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#003B73] tracking-tight mb-6">
           What We Offer
         </h2>
-        <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          At Azlaan Contracting W.L.L, we deliver premium installation and interior solutions tailored for commercial, residential, and event-based environments.
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          AZLAAN CONTRACTING W.L.L is committed to providing premium installation and interior design services tailored for commercial, residential, and event-focused spaces. Our solutions blend aesthetics with functionality, delivering excellence at every step.
         </p>
-        <div className="mt-6 h-1 w-20 mx-auto bg-indigo-500 rounded-full shadow-md shadow-indigo-300"></div>
+        <div className="mt-6 h-1 w-20 mx-auto bg-[#FFD700] rounded-full shadow-md"></div>
       </section>
 
-      {/* Dynamic Service Cards Section */}
-      <div className="pb-20">
+      {/* Services Grid Section */}
+      <section className="bg-white py-14 px-6 md:px-16">
         <RecentServiceCard />
-      </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="text-center bg-[#003B73] text-white py-16 px-6 md:px-20">
+        <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          Ready to Elevate Your Space?
+        </h3>
+        <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+          Let our experts transform your interiors or events with customized, innovative solutions.
+        </p>
+        <a
+          href="/contact"
+          className="inline-block bg-[#FFD700] text-[#003B73] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300"
+        >
+          Contact Us Today
+        </a>
+      </section>
     </div>
   );
 };
