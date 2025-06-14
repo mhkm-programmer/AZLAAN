@@ -57,21 +57,21 @@ const HeaderAlFWZ = () => {
 
   return (
     <div className="sticky top-0 z-50 bg-[#f8fafc] text-[#1e293b] shadow-lg font-sans">
-    {/* Top Banner */}
-<div className="bg-gray-100 dark:bg-gray-800 py-2">
-  <h1 className="text-sm md:text-lg text-center font-semibold text-yellow-500 dark:text-yellow-300 tracking-wide">
-    <Typed
-      strings={[
-        "Welcome to AZLAAN CONTRACTING W.L.L",
-        "Experts in Event Management & Interior Solutions in Qatar",
-        "Office & Home Designs | Kiosks | Flooring | Curtains | Exhibition Stands",
-      ]}
-      typeSpeed={50}
-      backSpeed={30}
-      loop
-    />
-  </h1>
-</div>
+      {/* Top Banner */}
+      <div className="bg-gray-100 dark:bg-gray-800 py-2">
+        <h1 className="text-sm md:text-lg text-center font-semibold text-yellow-500 dark:text-yellow-300 tracking-wide">
+          <Typed
+            strings={[
+              "Welcome to AZLAAN CONTRACTING W.L.L",
+              "Experts in Event Management & Interior Solutions in Qatar",
+              "Office & Home Designs | Kiosks | Flooring | Curtains | Exhibition Stands",
+            ]}
+            typeSpeed={50}
+            backSpeed={30}
+            loop
+          />
+        </h1>
+      </div>
 
       {/* Main Header */}
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -97,7 +97,7 @@ const HeaderAlFWZ = () => {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-12 top-1/2 -translate-y-1/2 text-gray-400 hover:text-red-500"
+              className="absolute right-14 text-bold top-1/2 -translate-y-1/2 text-gray-400 hover:text-red-500"
             >
               ✕
             </button>
@@ -114,7 +114,7 @@ const HeaderAlFWZ = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden px-3 py-2 bg-yellow-300 rounded-md"
@@ -187,6 +187,7 @@ const HeaderAlFWZ = () => {
                       behavior: "smooth",
                       block: "center",
                     });
+                    setSearchResults([]); // ✅ Clear results on click
                   }}
                 >
                   {result.text}

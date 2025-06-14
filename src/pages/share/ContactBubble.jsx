@@ -48,7 +48,7 @@ const ContactBubble = () => {
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/+97455760872"
+          href="https://wa.me/97450183025"
           target="_blank"
           rel="noopener noreferrer"
           title="Chat on WhatsApp"
@@ -59,7 +59,7 @@ const ContactBubble = () => {
 
         {/* Phone */}
         <a
-          href="tel:+97455760872"
+          href="tel:+97450183025"
           title="Call Us"
           className={`${commonClasses} bg-sky-600 text-white hover:bg-sky-700`}
         >
@@ -68,7 +68,7 @@ const ContactBubble = () => {
 
         {/* Email */}
         <a
-          href="mailto:qatarwintrading@gmail.com"
+          href="mailto:azlaancontracting@gmail.com"
           title="Send Email"
           className={`${commonClasses} bg-amber-600 text-white hover:bg-amber-700`}
         >
@@ -77,7 +77,7 @@ const ContactBubble = () => {
 
         {/* Instagram */}
         <a
-          href="https://www.instagram.com/rokibwin?igsh=anU3ejd4dHFneDhi"
+          href="https://www.instagram.com/azlaancontracting/?igsh=MWp6YWtyYXZvM2hzbA=="
           target="_blank"
           rel="noopener noreferrer"
           title="Instagram"
@@ -88,7 +88,7 @@ const ContactBubble = () => {
 
         {/* Facebook */}
         <a
-          href="https://www.facebook.com/profile.php?id=61573137238181&mibextid=ZbWKwL"
+          href="https://www.facebook.com/azlaan.contracting"
           target="_blank"
           rel="noopener noreferrer"
           title="Facebook Page"

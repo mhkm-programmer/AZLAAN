@@ -6,14 +6,14 @@ import React from "react";
 const CustomerReviews = () => {
   const reviews = [
     {
-      image: "https://8upload.com/image/67a01a1ccc5a5/Ahmed_Al-Ansari.jpg",
+      image: "https://8upload.com/image/683b19d4b15a3/Leonardo_Phoenix_10_AZLAAN_CONTRACTING_WLL_CR_No_170827azla_2.jpgz",
       quoteEn: "LuxeFurnish exceeded my expectations with their custom furniture and professional service.",
       quoteAr: "لقد فاق فريق لوكس فرنيش توقعاتي بالأثاث المصمم والخدمة الاحترافية.",
       name: "Ahmed Al-Ansari",
       title: "Business Owner, Doha",
     },
     {
-      image: "https://8upload.com/image/67a01a1ca7613/Noor_Fatima.jpg",
+      image: "https://8upload.com/image/683b19d553549/Noor_.jpg",
       quoteEn: "Their expertise in interior design transformed our home into a modern masterpiece.",
       quoteAr: "خبرتهم في التصميم الداخلي حولت منزلنا إلى تحفة فنية عصرية.",
       name: "Noor Fatima",
@@ -21,7 +21,10 @@ const CustomerReviews = () => {
     },
     {
       image: "https://8upload.com/image/67a01a1c849be/Mohammed_Khalifa.jpg",
-     
+     quoteEn: "Their expertise in interior design transformed our home into a modern masterpiece.",
+      quoteAr: "خبرتهم في التصميم الداخلي حولت منزلنا إلى تحفة فنية عصرية.",
+      name: "Noor Fatima",
+      title: "HR Manager, Qatar Tech Solutions",
     },
     {
       image: "https://8upload.com/image/67a01a1c6130d/Sara_Ibrahim.jpg",
