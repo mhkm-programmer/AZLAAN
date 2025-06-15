@@ -5,6 +5,7 @@ import {
   FaPhoneAlt,
   FaWhatsapp,
 } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -49,10 +50,10 @@ const Footer = () => {
                 Quick Links
               </h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/" className="hover:text-violet-400">Home</a></li>
-                <li><a href="/about" className="hover:text-violet-400">PROFILE</a></li>
-                <li><a href="/service" className="hover:text-violet-400">Services</a></li>
-              </ul>
+  <li><NavLink to="/" className="hover:text-violet-400">Home</NavLink></li>
+  <li><NavLink to="/about" className="hover:text-violet-400">Profile</NavLink></li>
+  <li><NavLink to="/service" className="hover:text-violet-400">Services</NavLink></li>
+</ul>
             </div>
 
             

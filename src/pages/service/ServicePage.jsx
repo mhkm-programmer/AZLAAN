@@ -2,6 +2,7 @@ import React from "react";
 import PageTitle from "../reusable/PageTitle";
 import ParallaxSection from "../reusable/Parallax";
 import RecentServiceCard from "./RecentServiceCard";
+import { NavLink } from "react-router-dom";
 
 const ServicePage = () => {
   return (
@@ -40,13 +41,13 @@ const ServicePage = () => {
         <p className="max-w-2xl mx-auto text-lg md:text-xl mb-8">
           Contact our team of experts today for personalized solutions that elevate your interiors and events to the highest standards of quality and style.
         </p>
-        <a
-          href="/contact"
-          className="inline-block bg-[#FFD700] text-[#003B73] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300"
-          aria-label="Contact AZLAAN CONTRACTING W.L.L"
-        >
-          Get in Touch
-        </a>
+      <NavLink
+  to="/contact"
+  className="inline-block bg-[#FFD700] text-[#003B73] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300"
+  aria-label="Contact AZLAAN CONTRACTING W.L.L"
+>
+  Get in Touch
+</NavLink>
       </section>
     </div>
   );
