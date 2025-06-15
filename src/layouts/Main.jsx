@@ -1,23 +1,26 @@
-import ContactBubble from "../pages/share/ContactBubble";
-import Footer from "../pages/share/footer/Footer";
-import HeaderAlFWZ from "../pages/share/header/HeaderAlFWZ";
 import { Outlet } from "react-router-dom";
+import HeaderAlFWZ from "../pages/share/header/HeaderAlFWZ";
+import Footer from "../pages/share/footer/Footer";
+import ContactBubble from "../pages/share/ContactBubble";
 
-const Main = () => {
-
-
+const MainLayout = () => {
   return (
-    <div className="main-container relative">
+    <div className="relative min-h-screen flex flex-col justify-between">
+      {/* Site Header */}
       <HeaderAlFWZ />
-      <main className="content">
+
+      {/* Page Content */}
+      <main className="flex-grow">
         <Outlet />
       </main>
-      <Footer />
-      <ContactBubble />
 
-      
+      {/* Site Footer */}
+      <Footer />
+
+      {/* Floating Contact and Scroll Buttons */}
+      <ContactBubble />
     </div>
   );
 };
 
-export default Main;
+export default MainLayout;

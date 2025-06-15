@@ -8,7 +8,7 @@ const ContactPage = () => {
         <div>
          <PageTitle title="Al-FWZ Furniture Trading & Contracting | Contact Us" />
              <ParallaxSection
-        imagePath="https://8upload.com/image/684dd25737c44/Contact__2_.jpg"
+        imagePath="https://8upload.com/image/684e873c662aa/Contact__3_.jpg"
         title=""
         subTitle=""
       />

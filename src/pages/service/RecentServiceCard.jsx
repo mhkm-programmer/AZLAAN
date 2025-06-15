@@ -426,14 +426,16 @@ const shortTextLength = 100; // Adjust the character limit
   const displayedServices = showAllServices ? Services : Services.slice(0, 15);
 
   return (
-  <div className="px-6 py-8 lg:py-10 bg-[#F2EDE6] dark:bg-gray-800 dark:text-gray-100">
-    {/* Header Section */}
-    <h1 className="text-center text-3xl font-bold mb-4">
-      Explore Our <span className="text-[#6B4226]">Specialized Services</span>
-    </h1>
-    <h2 className="text-center text-lg font-medium text-gray-700 mb-12">
-      Innovative Event & Interior Solutions Designed to Transform Spaces and Experiences
-    </h2>
+  <div className="px-4 sm:px-6 md:px-10 py-8 lg:py-12 bg-[#F2EDE6] dark:bg-gray-900 dark:text-white transition-all duration-300">
+      {/* Header */}
+      <div className="text-center mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#6B4226] dark:text-yellow-200">
+          Explore Our <span className="text-[#3E2723] dark:text-yellow-300">Specialized Services</span>
+        </h1>
+        <p className="text-lg mt-3 text-gray-700 dark:text-gray-300">
+          Innovative Event & Interior Solutions Designed to Transform Spaces and Experiences
+        </p>
+      </div>
 
     {/* Reference for scrolling back */}
     <div ref={servicesRef}></div>

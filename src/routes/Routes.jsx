@@ -1,15 +1,11 @@
+import { createBrowserRouter } from "react-router-dom";
+
+import Main from "../layouts/Main";
+import Home from "../pages/Home/Home";
+import ServicePage from "../pages/service/ServicePage";
 import AboutMePage from "../pages/about/AboutMePage";
-import BlogPage from "../pages/blogs/BlogPage";
 import ContactPage from "../pages/contact/ContactPage";
 import ErrorPage from "../pages/errorPage/ErrorPage";
-import FaqPage from "../pages/FAQ/FaqPage";
-import Furniture from "../Products/Furniture";
-import Home from "../pages/Home/Home";
-import Main from "../layouts/Main";
-import PortfolioPage from "../pages/portfolio/PortfolioPage";
-import ServicePage from "../pages/service/ServicePage";
-import Terms from "../pages/terms/Terms";
-import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -19,52 +15,31 @@ const router = createBrowserRouter([
         <Main />
       </div>
     ),
-    errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        index: true, // default route for "/"
         element: <Home />,
       },
       {
-        path: "/service",
+        path: "service",
         element: <ServicePage />,
-        children:[
-          {
-          path:"/service/furniture",
-          element:<Furniture/>,
-        },
-        ]
       },
       {
-        path: "/portfolio",
-        element: <PortfolioPage />,
-      },
-      {
-        path: "/blog",
-        element: <BlogPage />,
-      },
-      {
-        path: "/about",
+        path: "about",
         element: <AboutMePage />,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <ContactPage />,
-      },
-      {
-        path: "/faq",
-        element: <FaqPage />,
-      },
-      {
-        path: "/terms",
-        element: <Terms></Terms>,
       },
     ],
   },
 
+  // Fallback for unmatched routes
   {
     path: "*",
-    element: <ErrorPage></ErrorPage>,
+    element: <ErrorPage />,
   },
 ]);
 
